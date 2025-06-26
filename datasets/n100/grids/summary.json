@@ -1,0 +1,38 @@
+{
+  "size": 100,
+  "total_graphs": 20,
+  "actual_sizes": {
+    "100": 7,
+    "105": 1,
+    "110": 2,
+    "81": 1,
+    "116": 2,
+    "120": 5,
+    "90": 1,
+    "88": 1
+  },
+  "grid_dimensions": {
+    "5x20": 1,
+    "7x15": 1,
+    "11x8": 1,
+    "9x9": 1,
+    "10x9": 1,
+    "30x4": 2,
+    "10x10": 2,
+    "10x12": 1,
+    "4x30": 2,
+    "10x11": 2,
+    "4x29": 2,
+    "4x25": 4
+  },
+  "mutual_visibility_stats": {
+    "min_mv": 8,
+    "max_mv": 20,
+    "avg_mv": 12.8,
+    "median_mv": 10
+  },
+  "degree_distribution": {
+    "max_degree_range": "4-4",
+    "min_degree_range": "2-2"
+  }
+}
