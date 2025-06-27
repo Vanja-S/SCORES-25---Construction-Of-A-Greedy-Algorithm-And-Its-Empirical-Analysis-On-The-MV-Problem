@@ -260,11 +260,10 @@ def generate_grid_dataset():
 
     all_dataset_info = {}
 
-    print("Generating annotated grid dataset...")
-    print("=" * 50)
+    print("🔄 Generating grid dataset...")
 
     for size in sizes:
-        print(f"\nGenerating grids of approximately size {size}...")
+        print(f"\n📊 Generating grids of approximately size {size}...")
 
         dataset_info = []
         graph_id = 0
@@ -322,10 +321,12 @@ def generate_grid_dataset():
                     {"filename": relative_filename, "graph_id": graph_id, **properties}
                 )
 
+                print(f"  ✅ Generated grid {graph_id:03d}: {n}×{m} grid ({n*m} nodes) -> {relative_filename}")
+
                 graph_id += 1
 
             except Exception as e:
-                print(f"    Error generating grid of size {size}: {e}")
+                print(f"  ❌ Error generating grid of size {size}: {e}")
                 continue
 
         # Save dataset metadata for this size
@@ -340,18 +341,17 @@ def generate_grid_dataset():
         # Create summary for this size
         create_size_summary(size, dataset_info, project_root)
 
-        print(f"  Generated {len(dataset_info)} grids for size {size}")
+        print(f"📋 Created metadata: {metadata_file}")
+        print(f"📈 Created summary for {size} nodes")
+        print(f"✅ Generated {len(dataset_info)} grids for size {size}")
 
     # Create overall summary
     create_overall_summary(all_dataset_info, project_root)
 
-    print(f"\n" + "=" * 50)
-    print("DATASET GENERATION COMPLETE!")
-    print("=" * 50)
+    print(f"\n📊 Created overall summary")
 
     total_grids = sum(len(info) for info in all_dataset_info.values())
-    print(f"Total grids generated: {total_grids}")
-    print(f"Saved in folder structure: ./datasets/n{{size}}/grids/")
+    print(f"🎉 Total dataset: {total_grids} grid graphs generated!")
 
 
 def create_size_summary(size, dataset_info, project_root):
@@ -459,18 +459,17 @@ def verify_dataset_integrity(project_root):
     sizes = [10, 100, 1000]
     verification_results = {}
 
-    print("Verifying grid dataset integrity...")
-    print("=" * 50)
+    print("🔍 Verifying grid dataset...")
 
     for size in sizes:
-        print(f"\nVerifying grids of size ≈{size}...")
+        print(f"\n📂 Verifying grids of size ≈{size}...")
 
         # Load dataset info
         dataset_info_file = (
             project_root / "datasets" / f"n{size}" / "grids" / "dataset_info.json"
         )
         if not dataset_info_file.exists():
-            print(f"  ERROR: dataset_info.json not found for size {size}")
+            print(f"  ❌ ERROR: dataset_info.json not found for size {size}")
             continue
 
         with open(dataset_info_file, "r") as f:
@@ -510,9 +509,11 @@ def verify_dataset_integrity(project_root):
 
                 if is_valid:
                     results["valid_grids"] += 1
+                    print(f"  ✅ {filename}: Valid {expected_n}×{expected_m} grid ({expected_nodes} nodes)")
                 else:
                     results["invalid_grids"] += 1
                     results["errors"].append(f"{filename}: {error_msg}")
+                    print(f"  ❌ {filename}: {error_msg}")
 
                     if "Wrong size" in error_msg:
                         results["size_mismatches"] += 1
@@ -522,58 +523,57 @@ def verify_dataset_integrity(project_root):
             except Exception as e:
                 results["invalid_grids"] += 1
                 results["errors"].append(f"{filename}: Error loading file - {str(e)}")
+                print(f"  ❌ {filename}: Error loading file - {str(e)}")
 
         verification_results[f"n{size}"] = results
-
-        # Print summary for this size
-        print(f"  Results for n≈{size}:")
-        print(f"    Total files: {results['total_files']}")
-        print(f"    Valid grids: {results['valid_grids']}")
         print(f"    Invalid grids: {results['invalid_grids']}")
         print(f"    Missing files: {results['missing_files']}")
 
-        if results["errors"]:
-            print(f"    Errors found: {len(results['errors'])}")
-            for error in results["errors"][:5]:  # Show first 5 errors
-                print(f"      - {error}")
-            if len(results["errors"]) > 5:
-                print(f"      ... and {len(results['errors']) - 5} more errors")
+    # Print overall summary
+    total_files = sum(r["total_files"] for r in verification_results.values())
+    total_valid = sum(r["valid_grids"] for r in verification_results.values())
+    total_errors = sum(len(r["errors"]) for r in verification_results.values())
+    
+    print(f"\n📊 Verification Summary:")
+    print(f"Total files checked: {total_files}")
+    print(f"Valid grids: {total_valid}")
+    print(f"Errors: {total_errors}")
 
-    print(f"\n" + "=" * 50)
-    print("GRID DATASET VERIFICATION COMPLETE!")
-    print("=" * 50)
+    if total_errors > 0:
+        print(f"\n❌ Errors found:")
+        for size_label, results in verification_results.items():
+            if results["errors"]:
+                for error in results["errors"][:3]:  # Show first 3 errors per size
+                    print(f"  - {error}")
+                if len(results["errors"]) > 3:
+                    print(f"  ... and {len(results['errors']) - 3} more errors in {size_label}")
+    else:
+        print("✅ All grids are valid!")
 
-    total_valid = sum(
-        results["valid_grids"] for results in verification_results.values()
-    )
-    total_invalid = sum(
-        results["invalid_grids"] for results in verification_results.values()
-    )
-    total_missing = sum(
-        results["missing_files"] for results in verification_results.values()
-    )
-
-    print(f"Overall Results:")
-    print(f"  Valid grids: {total_valid}")
-    print(f"  Invalid grids: {total_invalid}")
-    print(f"  Missing files: {total_missing}")
-    print(
-        f"  Success rate: {total_valid/(total_valid+total_invalid)*100:.1f}%"
-        if (total_valid + total_invalid) > 0
-        else "N/A"
-    )
-
-    return verification_results
+    return total_valid == total_files and total_errors == 0
 
 
 if __name__ == "__main__":
+    import argparse
     import sys
 
-    if len(sys.argv) > 1 and sys.argv[1] == "--verify":
+    parser = argparse.ArgumentParser(
+        description="Generate and verify grid graph datasets for mutual visibility research"
+    )
+    parser.add_argument(
+        "--verify",
+        action="store_true",
+        help="Verify existing dataset integrity instead of generating new data"
+    )
+
+    args = parser.parse_args()
+
+    if args.verify:
         # Verify existing dataset
         script_dir = Path(__file__).parent
         project_root = script_dir.parent
-        verify_dataset_integrity(project_root)
+        success = verify_dataset_integrity(project_root)
+        sys.exit(0 if success else 1)
     else:
         # Generate new dataset
         generate_grid_dataset()

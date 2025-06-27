@@ -249,17 +249,16 @@ def generate_tree_dataset():
 
     all_dataset_info = {}
 
-    print("Generating annotated tree dataset...")
-    print("=" * 50)
+    print("🔄 Generating tree dataset...")
 
     for size in sizes:
-        print(f"\nGenerating trees of size {size}...")
+        print(f"\n📊 Generating trees of size {size}...")
 
         dataset_info = []
         graph_id = 0
 
         for tree_type, generator_func in tree_generators:
-            print(f"  Generating {tree_type} trees...")
+            print(f"  🌳 Generating {tree_type} trees...")
 
             instances = instances_per_type[size]
 
@@ -274,7 +273,7 @@ def generate_tree_dataset():
                     is_valid, error_msg = is_valid_tree(G)
                     if not is_valid:
                         print(
-                            f"    Warning: Generated invalid tree for {tree_type}_{size}_{instance}: {error_msg}"
+                            f"    ❌ Warning: Generated invalid tree for {tree_type}_{size}_{instance}: {error_msg}"
                         )
                         continue
 
@@ -298,7 +297,7 @@ def generate_tree_dataset():
                     is_valid, error_msg = is_valid_tree(G, expected_size=size)
                     if not is_valid:
                         print(
-                            f"    Warning: Tree became invalid after size adjustment for {tree_type}_{size}_{instance}: {error_msg}"
+                            f"    ❌ Warning: Tree became invalid after size adjustment for {tree_type}_{size}_{instance}: {error_msg}"
                         )
                         continue
 
@@ -346,10 +345,12 @@ def generate_tree_dataset():
                         }
                     )
 
+                    print(f"    ✅ Generated tree {graph_id:03d}: {tree_type} tree ({size} nodes) -> {relative_filename}")
+
                     graph_id += 1
 
                 except Exception as e:
-                    print(f"    Error generating {tree_type} tree of size {size}: {e}")
+                    print(f"    ❌ Error generating {tree_type} tree of size {size}: {e}")
                     continue
 
         # Save dataset metadata for this size
@@ -364,18 +365,17 @@ def generate_tree_dataset():
         # Create summary for this size
         create_size_summary(size, dataset_info, project_root)
 
-        print(f"  Generated {len(dataset_info)} trees for size {size}")
+        print(f"📋 Created metadata: {metadata_file}")
+        print(f"📈 Created summary for {size} nodes")
+        print(f"✅ Generated {len(dataset_info)} trees for size {size}")
 
     # Create overall summary
     create_overall_summary(all_dataset_info, project_root)
 
-    print(f"\n" + "=" * 50)
-    print("DATASET GENERATION COMPLETE!")
-    print("=" * 50)
+    print(f"\n📊 Created overall summary")
 
     total_trees = sum(len(info) for info in all_dataset_info.values())
-    print(f"Total trees generated: {total_trees}")
-    print(f"Saved in folder structure: ./datasets/n{{size}}/trees/")
+    print(f"🎉 Total dataset: {total_trees} tree graphs generated!")
 
 
 def create_size_summary(size, dataset_info, project_root):
@@ -501,18 +501,17 @@ def verify_dataset_integrity(project_root):
     sizes = [10, 100, 1000]
     verification_results = {}
 
-    print("Verifying dataset integrity...")
-    print("=" * 50)
+    print("🔍 Verifying tree dataset...")
 
     for size in sizes:
-        print(f"\nVerifying trees of size {size}...")
+        print(f"\n📂 Verifying trees of size {size}...")
 
         # Load dataset info
         dataset_info_file = (
             project_root / "datasets" / f"n{size}" / "trees" / "dataset_info.json"
         )
         if not dataset_info_file.exists():
-            print(f"  ERROR: dataset_info.json not found for size {size}")
+            print(f"  ❌ ERROR: dataset_info.json not found for size {size}")
             continue
 
         with open(dataset_info_file, "r") as f:
@@ -548,9 +547,11 @@ def verify_dataset_integrity(project_root):
 
                 if is_valid:
                     results["valid_trees"] += 1
+                    print(f"  ✅ {filename}: Valid tree ({expected_size} nodes)")
                 else:
                     results["invalid_trees"] += 1
                     results["errors"].append(f"{filename}: {error_msg}")
+                    print(f"  ❌ {filename}: {error_msg}")
 
                     if "Wrong size" in error_msg:
                         results["size_mismatches"] += 1
@@ -560,25 +561,32 @@ def verify_dataset_integrity(project_root):
             except Exception as e:
                 results["invalid_trees"] += 1
                 results["errors"].append(f"{filename}: Error loading file - {str(e)}")
+                print(f"  ❌ {filename}: Error loading file - {str(e)}")
 
         verification_results[f"n{size}"] = results
 
-        # Print summary for this size
-        print(f"  Results for n={size}:")
-        print(f"    Total files: {results['total_files']}")
-        print(f"    Valid trees: {results['valid_trees']}")
-        print(f"    Invalid trees: {results['invalid_trees']}")
-        print(f"    Missing files: {results['missing_files']}")
+    # Print overall summary
+    total_files = sum(r["total_files"] for r in verification_results.values())
+    total_valid = sum(r["valid_trees"] for r in verification_results.values())
+    total_errors = sum(len(r["errors"]) for r in verification_results.values())
+    
+    print(f"\n📊 Verification Summary:")
+    print(f"Total files checked: {total_files}")
+    print(f"Valid trees: {total_valid}")
+    print(f"Errors: {total_errors}")
 
-        if results["errors"]:
-            print(f"    Errors found: {len(results['errors'])}")
-            for error in results["errors"][:5]:  # Show first 5 errors
-                print(f"      - {error}")
-            if len(results["errors"]) > 5:
-                print(f"      ... and {len(results['errors']) - 5} more errors")
+    if total_errors > 0:
+        print(f"\n❌ Errors found:")
+        for size_label, results in verification_results.items():
+            if results["errors"]:
+                for error in results["errors"][:3]:  # Show first 3 errors per size
+                    print(f"  - {error}")
+                if len(results["errors"]) > 3:
+                    print(f"  ... and {len(results['errors']) - 3} more errors in {size_label}")
+    else:
+        print("✅ All trees are valid!")
 
-    print(f"\n" + "=" * 50)
-    print("DATASET VERIFICATION COMPLETE!")
+    return total_valid == total_files and total_errors == 0
     print("=" * 50)
 
     total_valid = sum(
@@ -605,13 +613,26 @@ def verify_dataset_integrity(project_root):
 
 
 if __name__ == "__main__":
+    import argparse
     import sys
 
-    if len(sys.argv) > 1 and sys.argv[1] == "--verify":
+    parser = argparse.ArgumentParser(
+        description="Generate and verify tree graph datasets for mutual visibility research"
+    )
+    parser.add_argument(
+        "--verify",
+        action="store_true",
+        help="Verify existing dataset integrity instead of generating new data"
+    )
+
+    args = parser.parse_args()
+
+    if args.verify:
         # Verify existing dataset
         script_dir = Path(__file__).parent
         project_root = script_dir.parent
-        verify_dataset_integrity(project_root)
+        success = verify_dataset_integrity(project_root)
+        sys.exit(0 if success else 1)
     else:
         # Generate new dataset
         generate_tree_dataset()
