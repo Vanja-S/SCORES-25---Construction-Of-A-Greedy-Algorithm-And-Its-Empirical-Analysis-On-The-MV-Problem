@@ -1,77 +1,126 @@
-def test_comprehensive():
-    print("\nComprehensive Testing of Mutual Visibility on Various Graphs:")
-    
-    # 1. Small Graphs
-    print("\n1. Small Graphs:")
-    # Path graph
-    G_path = nx.path_graph(5)
-    S_path = greedy_mutual_visibility(G_path)
-    print(f"Path graph (5 nodes): mutual-visibility set: {S_path}")
-    
-    # Star graph
-    G_star = nx.star_graph(4)
-    S_star = greedy_mutual_visibility(G_star)
-    print(f"Star graph (5 nodes): mutual-visibility set: {S_star}")
-    
-    # Wheel graph
-    G_wheel = nx.wheel_graph(6)
-    S_wheel = greedy_mutual_visibility(G_wheel)
-    print(f"Wheel graph (6 nodes): mutual-visibility set: {S_wheel}")
+import networkx as nx
+import os
+import json
+import time
 
-    # 2. Medium Graphs
-    print("\n2. Medium Graphs:")
-    # Complete bipartite
-    G_bipartite = nx.complete_bipartite_graph(4, 4)
-    S_bipartite = greedy_mutual_visibility(G_bipartite)
-    print(f"Complete bipartite (8 nodes): mutual-visibility set: {S_bipartite}")
-    
-    # Grid graph
-    G_grid = nx.grid_2d_graph(4, 4)
-    S_grid = greedy_mutual_visibility(G_grid)
-    print(f"4x4 grid graph: mutual-visibility set: {S_grid}")
-    
-    # Random regular graph
-    G_regular = nx.random_regular_graph(3, 10, seed=42)
-    S_regular = greedy_mutual_visibility(G_regular)
-    print(f"Random 3-regular graph (10 nodes): mutual-visibility set: {S_regular}")
+from mutual_visibility import (
+    bfs_mv, mv, greedy_mutual_visibility,
+    get_one_shortest_path_and_internal_vertices, build_mv_hypergraph,
+    k_independent_set
+)
 
-    # 3. Large Graphs
-    print("\n3. Large Graphs:")
-    # Large cycle
-    G_large_cycle = nx.cycle_graph(20)
-    S_large_cycle = greedy_mutual_visibility(G_large_cycle)
-    print(f"Large cycle (20 nodes): mutual-visibility set size: {len(S_large_cycle)}")
-    
-    # Large complete graph
-    G_large_complete = nx.complete_graph(15)
-    S_large_complete = greedy_mutual_visibility(G_large_complete)
-    print(f"Large complete graph (15 nodes): mutual-visibility set size: {len(S_large_complete)}")
-    
-    # Large grid
-    G_large_grid = nx.grid_2d_graph(5, 5)
-    S_large_grid = greedy_mutual_visibility(G_large_grid)
-    print(f"5x5 grid graph: mutual-visibility set size: {len(S_large_grid)}")
 
-    # 4. Special Graphs
-    print("\n4. Special Graphs:")
-    # Petersen graph
-    G_petersen = nx.petersen_graph()
-    S_petersen = greedy_mutual_visibility(G_petersen)
-    print(f"Petersen graph: mutual-visibility set: {S_petersen}")
+def run_dataset_experiments(dataset_base_path="datasets"):
+    """
+    Iterates through the GML dataset, runs mutual visibility algorithms,
+    and collects performance metrics.
     
-    # Random graph with high density
-    G_dense = nx.dense_gnm_random_graph(100, 400, seed=42)
-    S_dense = greedy_mutual_visibility(G_dense)
-    print(f"Dense random graph (12 nodes, 40 edges): mutual-visibility set size: {len(S_dense)}")
+    Assumes the following functions are already defined and available:
+    - bfs_mv
+    - algorithm_mv
+    - greedy_mutual_visibility
+    - get_one_shortest_path_and_internal_vertices
+    - build_mv_hypergraph
+    - caro_tuza_hypergraph_k_independent_set
+    """
+    results = [] 
     
-    # Random graph with low density
-    G_sparse = nx.dense_gnm_random_graph(12, 15, seed=42)
-    S_sparse = greedy_mutual_visibility(G_sparse)
-    print(f"Sparse random graph (12 nodes, 15 edges): mutual-visibility set size: {len(S_sparse)}")
+    size_categories = ["n10"] #
+    graph_types = ["trees", "grids"] #
 
-    # 5. Performance Test
-    print("\n5. Performance Test:")
-    # Very large cycle
-    G_very_large = nx.cycle_graph(50)
-    S_very_large = greedy_mutual_visibility(G_very_large)
-    print(f"Very large cycle (50 nodes): mutual-visibility set size: {len(S_very_large)}")
+    for size_cat in size_categories:
+        for graph_type in graph_types:
+            type_dir = os.path.join(dataset_base_path, size_cat, graph_type)
+            if not os.path.exists(type_dir):
+                print(f"Directory not found: {type_dir}. Skipping.")
+                continue
+
+            print(f"\n--- Running experiments for {size_cat}/{graph_type} ---")
+            
+            # Load dataset_info.json if available, for ground truth MV numbers
+            dataset_info_path = os.path.join(type_dir, "dataset_info.json") #
+            graphs_metadata = []
+            if os.path.exists(dataset_info_path):
+                with open(dataset_info_path, 'r') as f:
+                    graphs_metadata = json.load(f) #
+            else:
+                print(f"Warning: {dataset_info_path} not found. MV numbers will be N/A.") #
+            # Iterate through GML files
+            for gml_file in os.listdir(type_dir):
+                if gml_file.endswith(".gml"): #
+                    gml_path = os.path.join(type_dir, gml_file) #
+                    
+                    try:
+                        G = nx.read_gml(gml_path) #
+                        G = nx.relabel_nodes(G, {str(node): int(node) for node in G.nodes() if isinstance(node, str) and node.isdigit()})
+                        
+                        num_nodes = G.number_of_nodes() 
+                        num_edges = G.number_of_edges() 
+                        
+                        true_mv_num = G.graph.get("mutual_visibility_number", None)
+                        print(f"  Processing {gml_file} (Nodes: {num_nodes}, Edges: {num_edges}, True MV: {true_mv_num if true_mv_num is not None else 'N/A'})")
+
+                        # --- Run Algorithm 1: Direct Greedy Mutual Visibility ---
+                        start_time_direct = time.time()
+                        mv_set_direct = greedy_mutual_visibility(G) 
+                        runtime_direct = time.time() - start_time_direct
+                        size_direct = len(mv_set_direct)
+                        
+                        # --- Run Algorithm 2: Hypergraph-based (Caro & Tuza) ---
+                        start_time_hyper = time.time()
+                        mv_set_hyper = k_independent_set(list(G.nodes()), build_mv_hypergraph(G), k=1) #
+                        runtime_hyper = time.time() - start_time_hyper
+                        size_hyper = len(mv_set_hyper)
+                        
+                        # Calculate approximation ratios if true_mv_num is known
+                        ratio_direct = size_direct / true_mv_num if true_mv_num is not None and true_mv_num > 0 else (1.0 if true_mv_num == 0 and size_direct == 0 else None)
+                        ratio_hyper = size_hyper / true_mv_num if true_mv_num is not None and true_mv_num > 0 else (1.0 if true_mv_num == 0 and size_hyper == 0 else None)
+
+                        results.append({
+                            "graph_id": gml_file,
+                            "size_category": size_cat,
+                            "graph_type": graph_type,
+                            "num_nodes": num_nodes,
+                            "num_edges": num_edges,
+                            "true_mv_num": true_mv_num,
+                            "direct_greedy_size": size_direct,
+                            "direct_greedy_runtime": runtime_direct,
+                            "direct_greedy_ratio": ratio_direct,
+                            "hypergraph_algo_size": size_hyper,
+                            "hypergraph_algo_runtime": runtime_hyper,
+                            "hypergraph_algo_ratio": ratio_hyper,
+                        })
+
+                    except Exception as e:
+                        print(f"  Error processing {gml_file}: {e}")
+    
+    return results
+
+if __name__ == "__main__":
+    
+    all_experiment_results = run_dataset_experiments()
+    
+    output_filename = "experiment_results.json" #
+    with open(output_filename, 'w') as f:
+        json.dump(all_experiment_results, f, indent=4) #
+    print(f"\nAll experiment results saved to {output_filename}")
+
+    print("\n--- Experiment Summary (First 5 Results) ---")
+    if all_experiment_results:
+        for res in all_experiment_results[:5]: #
+            print(f"  Graph: {res['graph_id']}, Nodes: {res['num_nodes']}, Type: {res['graph_type']}")
+            direct_ratio = res['direct_greedy_ratio']
+            if direct_ratio is not None:
+                direct_ratio_str = f"{direct_ratio:.2f}"
+            else:
+                direct_ratio_str = "N/A"
+            print(f"    True MV: {res['true_mv_num']}, Direct Greedy: {res['direct_greedy_size']} (Ratio: {direct_ratio_str})")
+
+            hypergraph_ratio = res['hypergraph_algo_ratio']
+            if hypergraph_ratio is not None:
+                hypergraph_ratio_str = f"{hypergraph_ratio:.2f}"
+            else:
+                hypergraph_ratio_str = "N/A"
+            print(f"    Hypergraph Algo: {res['hypergraph_algo_size']} (Ratio: {hypergraph_ratio_str})")
+    else:
+        print("No results collected (check dataset path and file existence).")
