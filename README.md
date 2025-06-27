@@ -14,26 +14,34 @@ The generated dataset is organized as follows:
 datasets/
 ├── overall_summary.json          # Global tree dataset statistics
 ├── overall_grid_summary.json     # Global grid dataset statistics
+├── overall_torus_summary.json    # Global torus dataset statistics
 ├── n10/                         # Graphs with ~10 nodes
 │   ├── trees/
 │   │   ├── dataset_info.json   # Metadata for all trees in this size
 │   │   ├── summary.json         # Statistical summary for trees
 │   │   └── tree_*.gml          # Individual tree files in GML format
-│   └── grids/
-│       ├── dataset_info.json   # Metadata for all grids in this size
-│       ├── summary.json         # Statistical summary for grids
-│       └── grid_*.gml          # Individual grid files in GML format
+│   ├── grids/
+│   │   ├── dataset_info.json   # Metadata for all grids in this size
+│   │   ├── summary.json         # Statistical summary for grids
+│   │   └── grid_*.gml          # Individual grid files in GML format
+│   └── tori/
+│       ├── dataset_info.json   # Metadata for all tori in this size
+│       ├── summary.json         # Statistical summary for tori
+│       └── torus_*.gml         # Individual torus files in GML format
 ├── n100/                       # Graphs with ~100 nodes
 │   ├── trees/
-│   └── grids/
+│   ├── grids/
+│   └── tori/
 └── n1000/                      # Graphs with ~1000 nodes
     ├── trees/
+    ├── grids/
+    └── tori/
     └── grids/
 ```
 
 ### Graph Types Generated
 
-The dataset includes two main categories of graphs:
+The dataset includes three main categories of graphs:
 
 #### Tree Graphs
 
@@ -56,6 +64,16 @@ Grid graphs are Cartesian products of two paths (P_n × P_m) where:
 - Regular 2D lattice structures with well-defined geometric properties
 - Examples: 4×4 (16 nodes), 10×10 (100 nodes), 28×36 (1008 nodes)
 
+#### Torus Graphs
+
+Torus graphs are Cartesian products of two cycles (C_n × C_m) where:
+
+- Both dimensions n ≥ 3 and m ≥ 3
+- Generated to approximate target sizes (10, 100, 1000 nodes)
+- Regular 4-degree toroidal structures with wrap-around edges both horizontally and vertically
+- Mutual visibility upper bound: mv ≤ 3 × min(n, m) (exact value unknown)
+- Examples: 3×3 (9 nodes), 10×10 (100 nodes), 31×31 (961 nodes)
+
 ### Dataset Sizes and Instances
 
 #### Trees
@@ -72,7 +90,14 @@ Grid graphs are Cartesian products of two paths (P_n × P_m) where:
 
 **Total grid dataset**: 65 annotated grid instances (with varied dimensions)
 
-**Combined dataset size**: 520 total graph instances
+#### Tori
+- **Small tori (n≈10-12)**: 15 instances = 15 total tori (variable dimensions like 3×3, 3×4, 4×3)
+- **Medium tori (n≈100)**: 20 instances = 20 total tori (dimensions like 10×10, 3×36, 5×20)
+- **Large tori (n≈1000)**: 30 instances = 30 total tori (dimensions like 31×31, 4×250, 8×125)
+
+**Total torus dataset**: 65 annotated torus instances (with varied dimensions)
+
+**Combined dataset size**: 585 total graph instances
 
 ### Graph Properties and Annotations
 
@@ -116,6 +141,25 @@ Each graph instance includes comprehensive metadata:
 - `graph_id`: Unique identifier
 - `seed`: Random seed used for reproducible generation
 
+#### Torus Properties
+
+- `nodes`: Number of vertices
+- `edges`: Number of edges
+- `torus_dimensions`: Array [n, m] of torus dimensions
+- `torus_width`: Width of the torus (n)
+- `torus_height`: Height of the torus (m)
+- `mutual_visibility_upper_bound`: Upper bound for mutual visibility: 3 × min(n, m)
+- `diameter`: Maximum shortest path distance
+- `radius`: Minimum eccentricity among all nodes
+- `center_size`: Number of nodes in the center
+- `max_degree`: Maximum degree (always 4 for torus graphs)
+- `min_degree`: Minimum degree (always 4 for torus graphs)
+- `avg_degree`: Average degree across all nodes (always 4.0 for torus graphs)
+- `graph_type`: Always "torus"
+- `instance`: Instance number
+- `graph_id`: Unique identifier
+- `seed`: Random seed used for reproducible generation
+
 #### Node-level Properties
 
 - `degree`: Degree of each node
@@ -140,6 +184,15 @@ To generate a new grid dataset:
 ```bash
 cd "dataset generators"
 python grids.py
+```
+
+#### Torus Generation (`dataset generators/tori.py`)
+
+To generate a new torus dataset:
+
+```bash
+cd "dataset generators"
+python tori.py
 ```
 
 The generation process includes:
@@ -180,6 +233,13 @@ cd "dataset generators"
 python grids.py --verify
 ```
 
+#### Torus Dataset Verification
+
+```bash
+cd "dataset generators"
+python tori.py --verify
+```
+
 The verification process checks:
 
 - **File Existence**: Confirms all referenced files exist
@@ -188,6 +248,7 @@ The verification process checks:
 - **Property Accuracy**: Checks computed properties against actual graph structure
 - **Grid Structure**: Validates proper grid topology and degree distribution (grids only)
 - **Tree Structure**: Validates tree connectivity and acyclicity (trees only)
+- **Torus Structure**: Validates 4-regular toroidal topology and wrap-around edges (tori only)
 
 #### Verification Results
 
@@ -221,11 +282,12 @@ Tree instances are stored in Graph Modeling Language (GML) format, which include
 
 This dataset is designed for:
 
-- **Algorithm Testing**: Standardized instances for mutual visibility algorithms on both trees and grids
+- **Algorithm Testing**: Standardized instances for mutual visibility algorithms on trees, grids, and tori
 - **Performance Analysis**: Diverse graph structures for comprehensive evaluation
-- **Structural Comparison**: Trees vs. grids provide different algorithmic challenges
+- **Structural Comparison**: Trees, grids, and tori provide different algorithmic challenges
 - **Reproducible Research**: Seeded generation ensures consistent results
 - **Scalability Studies**: Multiple size categories for performance scaling analysis
+- **Upper Bound Research**: Tori provide graphs with known upper bounds for mutual visibility
 - **Geometric Analysis**: Grid graphs enable study of spatial/geometric properties
 
 ### Dataset Statistics
