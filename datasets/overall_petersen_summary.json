@@ -1,0 +1,81 @@
+{
+  "dataset_type": "generalized_petersen_graphs",
+  "generation_date": "2025-06-28",
+  "dataset_sizes": [
+    "n10",
+    "n100",
+    "n1000"
+  ],
+  "total_graphs": 202,
+  "graphs_per_size": {
+    "n10": 2,
+    "n100": 100,
+    "n1000": 100
+  },
+  "size_summaries": {
+    "n10": {
+      "size_category": "n10",
+      "target_size": 10,
+      "total_graphs": 2,
+      "node_count_range": {
+        "min": 10,
+        "max": 10,
+        "avg": 10.0
+      },
+      "diameter_range": {
+        "min": 2,
+        "max": 3,
+        "avg": 2.5
+      },
+      "parameter_ranges": {
+        "n_min": 5,
+        "n_max": 5,
+        "k_min": 1,
+        "k_max": 2
+      }
+    },
+    "n100": {
+      "size_category": "n100",
+      "target_size": 100,
+      "total_graphs": 100,
+      "node_count_range": {
+        "min": 90,
+        "max": 98,
+        "avg": 93.46
+      },
+      "diameter_range": {
+        "min": 7,
+        "max": 25,
+        "avg": 9.73
+      },
+      "parameter_ranges": {
+        "n_min": 45,
+        "n_max": 49,
+        "k_min": 1,
+        "k_max": 24
+      }
+    },
+    "n1000": {
+      "size_category": "n1000",
+      "target_size": 1000,
+      "total_graphs": 100,
+      "node_count_range": {
+        "min": 950,
+        "max": 950,
+        "avg": 950.0
+      },
+      "diameter_range": {
+        "min": 17,
+        "max": 238,
+        "avg": 29.22
+      },
+      "parameter_ranges": {
+        "n_min": 475,
+        "n_max": 475,
+        "k_min": 1,
+        "k_max": 100
+      }
+    }
+  },
+  "description": "Complete dataset of generalized Petersen graphs GP(n,k) for mutual visibility research"
+}

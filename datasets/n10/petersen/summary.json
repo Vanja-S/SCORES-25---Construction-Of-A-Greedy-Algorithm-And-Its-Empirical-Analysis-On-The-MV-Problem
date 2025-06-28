@@ -1,0 +1,21 @@
+{
+  "size_category": "n10",
+  "target_size": 10,
+  "total_graphs": 2,
+  "node_count_range": {
+    "min": 10,
+    "max": 10,
+    "avg": 10.0
+  },
+  "diameter_range": {
+    "min": 2,
+    "max": 3,
+    "avg": 2.5
+  },
+  "parameter_ranges": {
+    "n_min": 5,
+    "n_max": 5,
+    "k_min": 1,
+    "k_max": 2
+  }
+}

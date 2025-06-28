@@ -1,0 +1,2509 @@
+{
+  "dataset_type": "generalized_petersen_graphs",
+  "size_category": "n100",
+  "generation_date": "2025-06-28",
+  "total_graphs": 100,
+  "description": "Generalized Petersen graphs GP(n,k) with approximately 100 nodes",
+  "graphs": [
+    {
+      "id": 0,
+      "filename": "petersen_000_gp_45_1.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 1
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 1,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 23,
+        "girth": 5,
+        "is_planar": true,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,1)"
+    },
+    {
+      "id": 1,
+      "filename": "petersen_001_gp_45_2.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 2
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 2,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 13,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,2)"
+    },
+    {
+      "id": 2,
+      "filename": "petersen_002_gp_45_3.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 3
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 3,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 10,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,3)"
+    },
+    {
+      "id": 3,
+      "filename": "petersen_003_gp_45_4.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 4
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 4,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 9,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,4)"
+    },
+    {
+      "id": 4,
+      "filename": "petersen_004_gp_45_5.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 5
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 5,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,5)"
+    },
+    {
+      "id": 5,
+      "filename": "petersen_005_gp_45_6.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 6
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 6,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,6)"
+    },
+    {
+      "id": 6,
+      "filename": "petersen_006_gp_45_7.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 7
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 7,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,7)"
+    },
+    {
+      "id": 7,
+      "filename": "petersen_007_gp_45_8.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 8
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 8,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,8)"
+    },
+    {
+      "id": 8,
+      "filename": "petersen_008_gp_45_9.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 9
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 9,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,9)"
+    },
+    {
+      "id": 9,
+      "filename": "petersen_009_gp_45_10.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 10
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 10,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,10)"
+    },
+    {
+      "id": 10,
+      "filename": "petersen_010_gp_45_11.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 11
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 11,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 9,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,11)"
+    },
+    {
+      "id": 11,
+      "filename": "petersen_011_gp_45_12.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 12
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 12,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,12)"
+    },
+    {
+      "id": 12,
+      "filename": "petersen_012_gp_45_13.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 13
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 13,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,13)"
+    },
+    {
+      "id": 13,
+      "filename": "petersen_013_gp_45_14.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 14
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 14,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 9,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,14)"
+    },
+    {
+      "id": 14,
+      "filename": "petersen_014_gp_45_15.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 15
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 15,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 10,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.16666666666666666,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,15)"
+    },
+    {
+      "id": 15,
+      "filename": "petersen_015_gp_45_16.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 16
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 16,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 9,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,16)"
+    },
+    {
+      "id": 16,
+      "filename": "petersen_016_gp_45_17.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 17
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 17,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,17)"
+    },
+    {
+      "id": 17,
+      "filename": "petersen_017_gp_45_18.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 18
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 18,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,18)"
+    },
+    {
+      "id": 18,
+      "filename": "petersen_018_gp_45_19.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 19
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 19,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,19)"
+    },
+    {
+      "id": 19,
+      "filename": "petersen_019_gp_45_20.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 20
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 20,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,20)"
+    },
+    {
+      "id": 20,
+      "filename": "petersen_020_gp_45_21.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 21
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 21,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 10,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,21)"
+    },
+    {
+      "id": 21,
+      "filename": "petersen_021_gp_45_22.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 45,
+        "k": 22
+      },
+      "properties": {
+        "nodes": 90,
+        "edges": 135,
+        "n_parameter": 45,
+        "k_parameter": 22,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 13,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.033707865168539325
+      },
+      "notes": "Generalized Petersen graph GP(45,22)"
+    },
+    {
+      "id": 22,
+      "filename": "petersen_022_gp_46_1.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 1
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 1,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 24,
+        "girth": 5,
+        "is_planar": true,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,1)"
+    },
+    {
+      "id": 23,
+      "filename": "petersen_023_gp_46_2.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 2
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 2,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 14,
+        "girth": "computed_later",
+        "is_planar": true,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,2)"
+    },
+    {
+      "id": 24,
+      "filename": "petersen_024_gp_46_3.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 3
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 3,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 11,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,3)"
+    },
+    {
+      "id": 25,
+      "filename": "petersen_025_gp_46_4.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 4
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 4,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 9,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,4)"
+    },
+    {
+      "id": 26,
+      "filename": "petersen_026_gp_46_5.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 5
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 5,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 9,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,5)"
+    },
+    {
+      "id": 27,
+      "filename": "petersen_027_gp_46_6.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 6
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 6,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,6)"
+    },
+    {
+      "id": 28,
+      "filename": "petersen_028_gp_46_7.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 7
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 7,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,7)"
+    },
+    {
+      "id": 29,
+      "filename": "petersen_029_gp_46_8.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 8
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 8,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,8)"
+    },
+    {
+      "id": 30,
+      "filename": "petersen_030_gp_46_9.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 9
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 9,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 9,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,9)"
+    },
+    {
+      "id": 31,
+      "filename": "petersen_031_gp_46_10.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 10
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 10,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,10)"
+    },
+    {
+      "id": 32,
+      "filename": "petersen_032_gp_46_11.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 11
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 11,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 9,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,11)"
+    },
+    {
+      "id": 33,
+      "filename": "petersen_033_gp_46_12.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 12
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 12,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,12)"
+    },
+    {
+      "id": 34,
+      "filename": "petersen_034_gp_46_13.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 13
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 13,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,13)"
+    },
+    {
+      "id": 35,
+      "filename": "petersen_035_gp_46_14.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 14
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 14,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,14)"
+    },
+    {
+      "id": 36,
+      "filename": "petersen_036_gp_46_15.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 15
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 15,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 11,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,15)"
+    },
+    {
+      "id": 37,
+      "filename": "petersen_037_gp_46_16.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 16
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 16,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 10,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,16)"
+    },
+    {
+      "id": 38,
+      "filename": "petersen_038_gp_46_17.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 17
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 17,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,17)"
+    },
+    {
+      "id": 39,
+      "filename": "petersen_039_gp_46_18.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 18
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 18,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,18)"
+    },
+    {
+      "id": 40,
+      "filename": "petersen_040_gp_46_19.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 19
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 19,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,19)"
+    },
+    {
+      "id": 41,
+      "filename": "petersen_041_gp_46_20.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 20
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 20,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,20)"
+    },
+    {
+      "id": 42,
+      "filename": "petersen_042_gp_46_21.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 21
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 21,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 9,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,21)"
+    },
+    {
+      "id": 43,
+      "filename": "petersen_043_gp_46_22.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 22
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 138,
+        "n_parameter": 46,
+        "k_parameter": 22,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 13,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03296703296703297
+      },
+      "notes": "Generalized Petersen graph GP(46,22)"
+    },
+    {
+      "id": 44,
+      "filename": "petersen_044_gp_46_23.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 46,
+        "k": 23
+      },
+      "properties": {
+        "nodes": 92,
+        "edges": 115,
+        "n_parameter": 46,
+        "k_parameter": 23,
+        "is_connected": true,
+        "is_3_regular": false,
+        "diameter": 14,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.027472527472527472
+      },
+      "notes": "Generalized Petersen graph GP(46,23)"
+    },
+    {
+      "id": 45,
+      "filename": "petersen_045_gp_47_1.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 1
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 1,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 24,
+        "girth": 5,
+        "is_planar": true,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,1)"
+    },
+    {
+      "id": 46,
+      "filename": "petersen_046_gp_47_2.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 2
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 2,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 14,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,2)"
+    },
+    {
+      "id": 47,
+      "filename": "petersen_047_gp_47_3.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 3
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 3,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 10,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,3)"
+    },
+    {
+      "id": 48,
+      "filename": "petersen_048_gp_47_4.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 4
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 4,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 9,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,4)"
+    },
+    {
+      "id": 49,
+      "filename": "petersen_049_gp_47_5.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 5
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 5,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,5)"
+    },
+    {
+      "id": 50,
+      "filename": "petersen_050_gp_47_6.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 6
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 6,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,6)"
+    },
+    {
+      "id": 51,
+      "filename": "petersen_051_gp_47_7.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 7
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 7,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,7)"
+    },
+    {
+      "id": 52,
+      "filename": "petersen_052_gp_47_8.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 8
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 8,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,8)"
+    },
+    {
+      "id": 53,
+      "filename": "petersen_053_gp_47_9.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 9
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 9,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,9)"
+    },
+    {
+      "id": 54,
+      "filename": "petersen_054_gp_47_10.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 10
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 10,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,10)"
+    },
+    {
+      "id": 55,
+      "filename": "petersen_055_gp_47_11.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 11
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 11,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,11)"
+    },
+    {
+      "id": 56,
+      "filename": "petersen_056_gp_47_12.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 12
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 12,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 9,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,12)"
+    },
+    {
+      "id": 57,
+      "filename": "petersen_057_gp_47_13.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 13
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 13,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,13)"
+    },
+    {
+      "id": 58,
+      "filename": "petersen_058_gp_47_14.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 14
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 14,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,14)"
+    },
+    {
+      "id": 59,
+      "filename": "petersen_059_gp_47_15.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 15
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 15,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 10,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,15)"
+    },
+    {
+      "id": 60,
+      "filename": "petersen_060_gp_47_16.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 16
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 16,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 10,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,16)"
+    },
+    {
+      "id": 61,
+      "filename": "petersen_061_gp_47_17.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 17
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 17,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,17)"
+    },
+    {
+      "id": 62,
+      "filename": "petersen_062_gp_47_18.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 18
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 18,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,18)"
+    },
+    {
+      "id": 63,
+      "filename": "petersen_063_gp_47_19.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 19
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 19,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,19)"
+    },
+    {
+      "id": 64,
+      "filename": "petersen_064_gp_47_20.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 20
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 20,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,20)"
+    },
+    {
+      "id": 65,
+      "filename": "petersen_065_gp_47_21.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 21
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 21,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,21)"
+    },
+    {
+      "id": 66,
+      "filename": "petersen_066_gp_47_22.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 22
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 22,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 10,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,22)"
+    },
+    {
+      "id": 67,
+      "filename": "petersen_067_gp_47_23.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 47,
+        "k": 23
+      },
+      "properties": {
+        "nodes": 94,
+        "edges": 141,
+        "n_parameter": 47,
+        "k_parameter": 23,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 14,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.03225806451612903
+      },
+      "notes": "Generalized Petersen graph GP(47,23)"
+    },
+    {
+      "id": 68,
+      "filename": "petersen_068_gp_48_1.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 1
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 1,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 25,
+        "girth": 5,
+        "is_planar": true,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,1)"
+    },
+    {
+      "id": 69,
+      "filename": "petersen_069_gp_48_2.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 2
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 2,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 14,
+        "girth": "computed_later",
+        "is_planar": true,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,2)"
+    },
+    {
+      "id": 70,
+      "filename": "petersen_070_gp_48_3.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 3
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 3,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 11,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,3)"
+    },
+    {
+      "id": 71,
+      "filename": "petersen_071_gp_48_4.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 4
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 4,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 9,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,4)"
+    },
+    {
+      "id": 72,
+      "filename": "petersen_072_gp_48_5.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 5
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 5,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,5)"
+    },
+    {
+      "id": 73,
+      "filename": "petersen_073_gp_48_6.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 6
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 6,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,6)"
+    },
+    {
+      "id": 74,
+      "filename": "petersen_074_gp_48_7.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 7
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 7,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,7)"
+    },
+    {
+      "id": 75,
+      "filename": "petersen_075_gp_48_8.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 8
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 8,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,8)"
+    },
+    {
+      "id": 76,
+      "filename": "petersen_076_gp_48_9.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 9
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 9,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,9)"
+    },
+    {
+      "id": 77,
+      "filename": "petersen_077_gp_48_10.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 10
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 10,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,10)"
+    },
+    {
+      "id": 78,
+      "filename": "petersen_078_gp_48_11.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 11
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 11,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,11)"
+    },
+    {
+      "id": 79,
+      "filename": "petersen_079_gp_48_12.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 12
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 12,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 9,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,12)"
+    },
+    {
+      "id": 80,
+      "filename": "petersen_080_gp_48_13.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 13
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 13,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,13)"
+    },
+    {
+      "id": 81,
+      "filename": "petersen_081_gp_48_14.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 14
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 14,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,14)"
+    },
+    {
+      "id": 82,
+      "filename": "petersen_082_gp_48_15.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 15
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 15,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 10,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,15)"
+    },
+    {
+      "id": 83,
+      "filename": "petersen_083_gp_48_16.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 16
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 16,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 11,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.16666666666666666,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,16)"
+    },
+    {
+      "id": 84,
+      "filename": "petersen_084_gp_48_17.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 17
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 17,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 10,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,17)"
+    },
+    {
+      "id": 85,
+      "filename": "petersen_085_gp_48_18.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 18
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 18,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,18)"
+    },
+    {
+      "id": 86,
+      "filename": "petersen_086_gp_48_19.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 19
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 19,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,19)"
+    },
+    {
+      "id": 87,
+      "filename": "petersen_087_gp_48_20.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 20
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 20,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 7,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,20)"
+    },
+    {
+      "id": 88,
+      "filename": "petersen_088_gp_48_21.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 21
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 21,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,21)"
+    },
+    {
+      "id": 89,
+      "filename": "petersen_089_gp_48_22.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 22
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 22,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 9,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,22)"
+    },
+    {
+      "id": 90,
+      "filename": "petersen_090_gp_48_23.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 23
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 144,
+        "n_parameter": 48,
+        "k_parameter": 23,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 13,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.031578947368421054
+      },
+      "notes": "Generalized Petersen graph GP(48,23)"
+    },
+    {
+      "id": 91,
+      "filename": "petersen_091_gp_48_24.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 48,
+        "k": 24
+      },
+      "properties": {
+        "nodes": 96,
+        "edges": 120,
+        "n_parameter": 48,
+        "k_parameter": 24,
+        "is_connected": true,
+        "is_3_regular": false,
+        "diameter": 14,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.02631578947368421
+      },
+      "notes": "Generalized Petersen graph GP(48,24)"
+    },
+    {
+      "id": 92,
+      "filename": "petersen_092_gp_49_1.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 49,
+        "k": 1
+      },
+      "properties": {
+        "nodes": 98,
+        "edges": 147,
+        "n_parameter": 49,
+        "k_parameter": 1,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 25,
+        "girth": 5,
+        "is_planar": true,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.030927835051546393
+      },
+      "notes": "Generalized Petersen graph GP(49,1)"
+    },
+    {
+      "id": 93,
+      "filename": "petersen_093_gp_49_2.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 49,
+        "k": 2
+      },
+      "properties": {
+        "nodes": 98,
+        "edges": 147,
+        "n_parameter": 49,
+        "k_parameter": 2,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 14,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.030927835051546393
+      },
+      "notes": "Generalized Petersen graph GP(49,2)"
+    },
+    {
+      "id": 94,
+      "filename": "petersen_094_gp_49_3.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 49,
+        "k": 3
+      },
+      "properties": {
+        "nodes": 98,
+        "edges": 147,
+        "n_parameter": 49,
+        "k_parameter": 3,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 11,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.030927835051546393
+      },
+      "notes": "Generalized Petersen graph GP(49,3)"
+    },
+    {
+      "id": 95,
+      "filename": "petersen_095_gp_49_4.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 49,
+        "k": 4
+      },
+      "properties": {
+        "nodes": 98,
+        "edges": 147,
+        "n_parameter": 49,
+        "k_parameter": 4,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 9,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.030927835051546393
+      },
+      "notes": "Generalized Petersen graph GP(49,4)"
+    },
+    {
+      "id": 96,
+      "filename": "petersen_096_gp_49_5.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 49,
+        "k": 5
+      },
+      "properties": {
+        "nodes": 98,
+        "edges": 147,
+        "n_parameter": 49,
+        "k_parameter": 5,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.030927835051546393
+      },
+      "notes": "Generalized Petersen graph GP(49,5)"
+    },
+    {
+      "id": 97,
+      "filename": "petersen_097_gp_49_6.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 49,
+        "k": 6
+      },
+      "properties": {
+        "nodes": 98,
+        "edges": 147,
+        "n_parameter": 49,
+        "k_parameter": 6,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.030927835051546393
+      },
+      "notes": "Generalized Petersen graph GP(49,6)"
+    },
+    {
+      "id": 98,
+      "filename": "petersen_098_gp_49_7.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 49,
+        "k": 7
+      },
+      "properties": {
+        "nodes": 98,
+        "edges": 147,
+        "n_parameter": 49,
+        "k_parameter": 7,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.030927835051546393
+      },
+      "notes": "Generalized Petersen graph GP(49,7)"
+    },
+    {
+      "id": 99,
+      "filename": "petersen_099_gp_49_8.gml",
+      "type": "generalized_petersen",
+      "parameters": {
+        "n": 49,
+        "k": 8
+      },
+      "properties": {
+        "nodes": 98,
+        "edges": 147,
+        "n_parameter": 49,
+        "k_parameter": 8,
+        "is_connected": true,
+        "is_3_regular": true,
+        "diameter": 8,
+        "girth": "computed_later",
+        "is_planar": false,
+        "automorphism_group_size": "not_computed",
+        "has_hamiltonian_cycle": "not_computed",
+        "clustering_coefficient": 0.0,
+        "density": 0.030927835051546393
+      },
+      "notes": "Generalized Petersen graph GP(49,8)"
+    }
+  ]
+}
