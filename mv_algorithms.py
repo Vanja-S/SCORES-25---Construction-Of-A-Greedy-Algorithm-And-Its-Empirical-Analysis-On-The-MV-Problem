@@ -2,6 +2,7 @@ import networkx as nx
 import numpy as np
 from collections import deque
 import matplotlib.pyplot as plt
+import random
 
 def bfs_mv(G, P, v, t):
     """
@@ -80,7 +81,6 @@ def mv(G, P):
        
         distances_in_H = bfs_mv(H, P, p, True)
         distances_in_H_minus_p = bfs_mv(H, P, p, False)
-
         if distances_in_H != distances_in_H_minus_p:
             return False
 
@@ -258,20 +258,122 @@ def brute_force_mutual_visibility(G):
     return max_mv_set
 
 
+def _count_mv_violations(G, P):
+    """
+    Helper function for the GA fitness calculation.
+    Counts the number of pairs in P that violate the mutual-visibility condition
+    """
+    if len(P) < 2:
+        return 0
+
+    P_nodes = list(P)
+
+    # We're assuming G is connected
+    violating_pairs = set()
+
+    for p in P_nodes:
+        distances_in_G = bfs_mv(G, P, p, True)
+        distances_in_G_minus_p = bfs_mv(G, P, p, False)
+
+        for q in P_nodes:
+            if p == q:
+                continue
+
+            dist_normal = distances_in_G.get(q, float('inf'))
+            dist_restricted = distances_in_G_minus_p.get(q, float('inf'))
+
+            # If the normal distance is shorter, the path was blocked by another P-node.
+            if dist_normal < dist_restricted:
+                violating_pairs.add(frozenset({p, q}))
+
+    return len(violating_pairs)
+
+
+def ga_mutual_visibility(G, n_p=50, maxit=100, penalty_multiplier=10):
+    """
+    Finds a large mutual-visibility set in graph G using a Genetic Algorithm.
+    The algorithm is adapted from the one for the General Position Problem. 
+
+    Parameters:
+    - G (networkx.Graph): The input graph.
+    - n_p (int): The size of the population. 
+    - maxit (int): The maximum number of iterations (generations). 
+    - penalty_multiplier (int): The constant M for the fitness penalty. 
     
+    Returns:
+    - set: The largest valid mutual-visibility set found by the algorithm.
+    """
+    
+    nodes = list(G.nodes())
+    node_to_idx = {node: i for i, node in enumerate(nodes)}
+    n = len(nodes)
+    
+  
+    population = [np.random.randint(0, 2, n) for _ in range(n_p)]
+    
+    best_solution_ever = set()
+    best_fitness_ever = -float('inf')
+
+    fitness_cache = {}
+
+    def get_fitness(chromosome_tuple):
+        nonlocal best_solution_ever
+        
+        if chromosome_tuple in fitness_cache:
+            return fitness_cache[chromosome_tuple]
+        
+        chromosome = np.array(chromosome_tuple)
+        S = {nodes[i] for i, bit in enumerate(chromosome) if bit == 1}
+        num_selected = len(S)
+        num_violations = _count_mv_violations(G, S)
+        
+        fitness = num_selected - penalty_multiplier * num_violations
+        fitness_cache[chromosome_tuple] = fitness
+
+        if num_violations == 0 and num_selected > len(best_solution_ever):
+            best_solution_ever = S
+            
+        return fitness
+
+    for _ in range(maxit):
+        pop_with_fitness = [(get_fitness(tuple(chromo)), chromo) for chromo in population]
+        
+        pop_with_fitness.sort(key=lambda x: x[0], reverse=True)
+        population = [chromo for fitness, chromo in pop_with_fitness]
+
+        next_gen_candidates = population[:n_p // 2]
+        
+        while len(next_gen_candidates) < n_p:
+            parent1, parent2 = random.choices(population, k=2)
+            
+            offspring = np.logical_or(parent1, parent2).astype(int)
+            
+            idx1, idx2 = random.sample(range(n), 2)
+            offspring[idx1], offspring[idx2] = offspring[idx2], offspring[idx1]
+            
+            next_gen_candidates.append(offspring)
+            
+        population = next_gen_candidates
+
+    final_fitness = get_fitness(tuple(np.array([1 if n in best_solution_ever else 0 for n in nodes])))
+    
+    if not best_solution_ever:
+        best_chromo_final = population[0]
+        return {nodes[i] for i, bit in enumerate(best_chromo_final) if bit == 1}
+
+    return best_solution_ever
 
 def forward(G : nx.Graph, run_brute_force=True, draw_graph=False):
     print("Graph: ", G.nodes())
-    if draw_graph:
-        plt.figure(figsize=(8, 6)) # Create a new figure
-        pos = nx.spring_layout(G) # Positions for all nodes
-        nx.draw(G, pos, with_labels=True, node_color='lightblue', edge_color='gray', node_size=800, font_size=10, font_weight='bold')
-        plt.title(G.name if hasattr(G, 'name') else 'Graph Visualization')
-        plt.show()
+    
     greedy_mv_set = greedy_mutual_visibility(G)
     hypergraph_edges = build_mv_hypergraph(G)
+    
     greedy_hypergraph_set = greedy_hypergraph_independent_set(G.nodes, hypergraph_edges)
     greedy_k_set = k_independent_set(G.nodes, hypergraph_edges)
+    genetic_set = ga_mutual_visibility(G)
+
+
     brute_force_mv_set = set()
     if run_brute_force:
         brute_force_mv_set = brute_force_mutual_visibility(G) 
@@ -283,21 +385,52 @@ def forward(G : nx.Graph, run_brute_force=True, draw_graph=False):
         print("Greedy Hypergraph Set is not a mutual-visibility set")
     if not mv(G, greedy_k_set):
         print("Greedy K Set is not a mutual-visibility set")
+    if not mv(G, genetic_set):
+        print("Genetic set is not a mutual-visibility set")
+
     print(f"Greedy MV Set: {greedy_mv_set}")
     print(f"Greedy Hypergraph Set: {greedy_hypergraph_set}")
     print(f"Greedy K Set: {greedy_k_set}")
+    print(f"Genetic Set: {genetic_set}")
     print(f"Brute Force MV Set: {brute_force_mv_set}")
-    
+
+    # Plot the graph with MV set nodes colored red
+    if draw_graph:
+        plt.figure(figsize=(10, 8))
+        
+        # Create node color list: red for nodes in MV set, lightblue for others
+        node_colors = []
+        for node in G.nodes():
+            if node in greedy_mv_set:
+                node_colors.append('red')
+            else:
+                node_colors.append('lightblue')
+        
+        pos = nx.spring_layout(G)
+        nx.draw(G, pos, with_labels=True, node_color=node_colors, edge_color='gray', 
+                node_size=700, font_size=10, font_weight='bold')
+        
+        # Add legend
+        from matplotlib.patches import Patch
+        legend_elements = [
+            Patch(facecolor='red', label='Mutual Visibility Set'),
+            Patch(facecolor='lightblue', label='Other Nodes')
+        ]
+        plt.legend(handles=legend_elements, loc='upper right')
+        
+        plt.title(f"{G.name if G.name else 'Graph'} - Mutual Visibility Set (Red Nodes)")
+        plt.show(block=False)
+
 
 def main():
 
-    G_er_50_005 = nx.erdos_renyi_graph(50, 0.05, seed=42) # A bit sparser for large N
+    G_petersen = nx.petersen_graph()
+    G_petersen.name = "Petersen Graph"
 
-    G_er_50_005.name = "Erdos-Renyi (N=50, p=0.05)"
-    forward(G_er_50_005, run_brute_force=False, draw_graph=False)
+    forward(G_petersen, draw_graph=True)
 
-    
-
+    input("\nAll computations are finished. Press Enter to exit and close all plots...")
 
 if __name__ == "__main__":
     main()
+

@@ -3,9 +3,10 @@ import os
 import json
 import time
 
-from mutual_visibility import (
+from mv_algorithms import (
     bfs_mv, mv, greedy_mutual_visibility,
     get_one_shortest_path_and_internal_vertices, build_mv_hypergraph,
+    ga_mutual_visibility,
     k_independent_set
 )
 
@@ -25,7 +26,7 @@ def run_dataset_experiments(dataset_base_path="datasets"):
     """
     results = [] 
     
-    size_categories = ["n10", "n100"] #
+    size_categories = ["n10"] #
     graph_types = ["trees", "grids"] #
 
     for size_cat in size_categories:
@@ -71,10 +72,17 @@ def run_dataset_experiments(dataset_base_path="datasets"):
                         mv_set_hyper = k_independent_set(list(G.nodes()), build_mv_hypergraph(G), k=1) #
                         runtime_hyper = time.time() - start_time_hyper
                         size_hyper = len(mv_set_hyper)
+
+                        # -- Run Algorithm 3: Genetic algorithm
+                        start_time_ga = time.time()
+                        mv_set_ga = ga_mutual_visibility(G)
+                        runtime_ga = time.time() - start_time_ga
+                        size_ga = len(mv_set_ga)
                         
                         # Calculate approximation ratios if true_mv_num is known
                         ratio_direct = size_direct / true_mv_num if true_mv_num is not None and true_mv_num > 0 else (1.0 if true_mv_num == 0 and size_direct == 0 else None)
                         ratio_hyper = size_hyper / true_mv_num if true_mv_num is not None and true_mv_num > 0 else (1.0 if true_mv_num == 0 and size_hyper == 0 else None)
+                        ratio_ga = size_ga / true_mv_num if true_mv_num is not None and true_mv_num > 0 else (1.0 if true_mv_num == 0 and size_ga == 0 else None)
 
                         results.append({
                             "graph_id": gml_file,
@@ -89,6 +97,9 @@ def run_dataset_experiments(dataset_base_path="datasets"):
                             "hypergraph_algo_size": size_hyper,
                             "hypergraph_algo_runtime": runtime_hyper,
                             "hypergraph_algo_ratio": ratio_hyper,
+                            "genetic_algo_size": size_ga,
+                            "genetic_algo_runtime": runtime_ga,
+                            "genetic_algo_ratio": ratio_ga,
                         })
 
                     except Exception as e:
@@ -122,5 +133,12 @@ if __name__ == "__main__":
             else:
                 hypergraph_ratio_str = "N/A"
             print(f"    Hypergraph Algo: {res['hypergraph_algo_size']} (Ratio: {hypergraph_ratio_str})")
+
+            genetic_ratio = res['genetic_algo_ratio']
+            if genetic_ratio is not None:
+                genetic_ratio_str = f"{genetic_ratio:.2f}"
+            else:
+                genetic_ratio_str = "N/A"
+            print(f"    Genetic Algo: {res['genetic_algo_size']} (Ratio: {genetic_ratio_str})")
     else:
         print("No results collected (check dataset path and file existence).")
