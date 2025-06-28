@@ -25,7 +25,7 @@ def run_dataset_experiments(dataset_base_path="datasets"):
     """
     results = [] 
     
-    size_categories = ["n10"] #
+    size_categories = ["n10", "n100"] #
     graph_types = ["trees", "grids"] #
 
     for size_cat in size_categories:
