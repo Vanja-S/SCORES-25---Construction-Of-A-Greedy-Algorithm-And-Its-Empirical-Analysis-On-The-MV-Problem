@@ -11,6 +11,7 @@
     "max_degree": 5,
     "avg_degree": 1.98,
     "internal_nodes": 59,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.0330190559947066,
     "tree_type": "random",
     "instance": 0,
     "seed": 100000
@@ -27,6 +28,7 @@
     "max_degree": 4,
     "avg_degree": 1.98,
     "internal_nodes": 66,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 2.768279085591344,
     "tree_type": "random",
     "instance": 1,
     "seed": 100043
@@ -43,6 +45,7 @@
     "max_degree": 6,
     "avg_degree": 1.98,
     "internal_nodes": 62,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.0191360956435944,
     "tree_type": "random",
     "instance": 2,
     "seed": 100086
@@ -59,6 +62,7 @@
     "max_degree": 5,
     "avg_degree": 1.98,
     "internal_nodes": 59,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.2929638674004735,
     "tree_type": "random",
     "instance": 3,
     "seed": 100129
@@ -75,6 +79,7 @@
     "max_degree": 6,
     "avg_degree": 1.98,
     "internal_nodes": 60,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 2.9795652475374204,
     "tree_type": "random",
     "instance": 4,
     "seed": 100172
@@ -91,6 +96,7 @@
     "max_degree": 4,
     "avg_degree": 1.98,
     "internal_nodes": 62,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 2.891574659831201,
     "tree_type": "random",
     "instance": 5,
     "seed": 100215
@@ -107,6 +113,7 @@
     "max_degree": 5,
     "avg_degree": 1.98,
     "internal_nodes": 62,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.1602991023073357,
     "tree_type": "random",
     "instance": 6,
     "seed": 100258
@@ -123,6 +130,7 @@
     "max_degree": 5,
     "avg_degree": 1.98,
     "internal_nodes": 63,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 2.9057695713366116,
     "tree_type": "random",
     "instance": 7,
     "seed": 100301
@@ -139,6 +147,7 @@
     "max_degree": 5,
     "avg_degree": 1.98,
     "internal_nodes": 65,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.1254624901977404,
     "tree_type": "random",
     "instance": 8,
     "seed": 100344
@@ -155,6 +164,7 @@
     "max_degree": 5,
     "avg_degree": 1.98,
     "internal_nodes": 59,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.1001759008289542,
     "tree_type": "random",
     "instance": 9,
     "seed": 100387
@@ -171,6 +181,7 @@
     "max_degree": 5,
     "avg_degree": 1.98,
     "internal_nodes": 64,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.0528844033359954,
     "tree_type": "random",
     "instance": 10,
     "seed": 100430
@@ -187,6 +198,7 @@
     "max_degree": 6,
     "avg_degree": 1.98,
     "internal_nodes": 64,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.035445719937452,
     "tree_type": "random",
     "instance": 11,
     "seed": 100473
@@ -203,6 +215,7 @@
     "max_degree": 5,
     "avg_degree": 1.98,
     "internal_nodes": 64,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.0722075675895444,
     "tree_type": "random",
     "instance": 12,
     "seed": 100516
@@ -219,6 +232,7 @@
     "max_degree": 6,
     "avg_degree": 1.98,
     "internal_nodes": 61,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.2250099499040012,
     "tree_type": "random",
     "instance": 13,
     "seed": 100559
@@ -235,6 +249,7 @@
     "max_degree": 5,
     "avg_degree": 1.98,
     "internal_nodes": 61,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 2.9753525644782552,
     "tree_type": "random",
     "instance": 14,
     "seed": 100602
@@ -251,6 +266,7 @@
     "max_degree": 6,
     "avg_degree": 1.98,
     "internal_nodes": 60,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.210639331133117,
     "tree_type": "random",
     "instance": 15,
     "seed": 100645
@@ -267,6 +283,7 @@
     "max_degree": 4,
     "avg_degree": 1.98,
     "internal_nodes": 62,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 2.9342364926666646,
     "tree_type": "random",
     "instance": 16,
     "seed": 100688
@@ -283,6 +300,7 @@
     "max_degree": 6,
     "avg_degree": 1.98,
     "internal_nodes": 63,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 2.7841866305887217,
     "tree_type": "random",
     "instance": 17,
     "seed": 100731
@@ -299,6 +317,7 @@
     "max_degree": 5,
     "avg_degree": 1.98,
     "internal_nodes": 65,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 2.83172414131037,
     "tree_type": "random",
     "instance": 18,
     "seed": 100774
@@ -315,6 +334,7 @@
     "max_degree": 5,
     "avg_degree": 1.98,
     "internal_nodes": 63,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.0550998390538266,
     "tree_type": "random",
     "instance": 19,
     "seed": 100817
@@ -331,6 +351,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 0,
     "seed": 100840
@@ -347,6 +368,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 1,
     "seed": 100883
@@ -363,6 +385,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 2,
     "seed": 100926
@@ -379,6 +402,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 3,
     "seed": 100969
@@ -395,6 +419,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 4,
     "seed": 101012
@@ -411,6 +436,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 5,
     "seed": 101055
@@ -427,6 +453,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 6,
     "seed": 101098
@@ -443,6 +470,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 7,
     "seed": 101141
@@ -459,6 +487,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 8,
     "seed": 101184
@@ -475,6 +504,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 9,
     "seed": 101227
@@ -491,6 +521,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 10,
     "seed": 101270
@@ -507,6 +538,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 11,
     "seed": 101313
@@ -523,6 +555,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 12,
     "seed": 101356
@@ -539,6 +572,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 13,
     "seed": 101399
@@ -555,6 +589,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 14,
     "seed": 101442
@@ -571,6 +606,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 15,
     "seed": 101485
@@ -587,6 +623,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 16,
     "seed": 101528
@@ -603,6 +640,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 17,
     "seed": 101571
@@ -619,6 +657,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 18,
     "seed": 101614
@@ -635,6 +674,7 @@
     "max_degree": 99,
     "avg_degree": 1.98,
     "internal_nodes": 1,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 7.106690545187014,
     "tree_type": "star",
     "instance": 19,
     "seed": 101657
@@ -651,6 +691,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 0,
     "seed": 101680
@@ -667,6 +708,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 1,
     "seed": 101723
@@ -683,6 +725,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 2,
     "seed": 101766
@@ -699,6 +742,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 3,
     "seed": 101809
@@ -715,6 +759,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 4,
     "seed": 101852
@@ -731,6 +776,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 5,
     "seed": 101895
@@ -747,6 +793,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 6,
     "seed": 101938
@@ -763,6 +810,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 7,
     "seed": 101981
@@ -779,6 +827,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 8,
     "seed": 102024
@@ -795,6 +844,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 9,
     "seed": 102067
@@ -811,6 +861,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 10,
     "seed": 102110
@@ -827,6 +878,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 11,
     "seed": 102153
@@ -843,6 +895,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 12,
     "seed": 102196
@@ -859,6 +912,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 13,
     "seed": 102239
@@ -875,6 +929,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 14,
     "seed": 102282
@@ -891,6 +946,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 15,
     "seed": 102325
@@ -907,6 +963,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 16,
     "seed": 102368
@@ -923,6 +980,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 17,
     "seed": 102411
@@ -939,6 +997,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 18,
     "seed": 102454
@@ -955,6 +1014,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "path",
     "instance": 19,
     "seed": 102497
@@ -971,6 +1031,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 56,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.565370164061463,
     "tree_type": "balanced",
     "instance": 0,
     "seed": 102520
@@ -987,6 +1048,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 58,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.5627178688835603,
     "tree_type": "balanced",
     "instance": 1,
     "seed": 102563
@@ -1003,6 +1065,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 57,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.563723214940992,
     "tree_type": "balanced",
     "instance": 2,
     "seed": 102606
@@ -1019,6 +1082,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 58,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.5632661339670415,
     "tree_type": "balanced",
     "instance": 3,
     "seed": 102649
@@ -1035,6 +1099,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 58,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.562991969788133,
     "tree_type": "balanced",
     "instance": 4,
     "seed": 102692
@@ -1051,6 +1116,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 56,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.5654617281988754,
     "tree_type": "balanced",
     "instance": 5,
     "seed": 102735
@@ -1067,6 +1133,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 57,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.5663777577410554,
     "tree_type": "balanced",
     "instance": 6,
     "seed": 102778
@@ -1083,6 +1150,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 59,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.562626515972126,
     "tree_type": "balanced",
     "instance": 7,
     "seed": 102821
@@ -1099,6 +1167,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 56,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.563906096588147,
     "tree_type": "balanced",
     "instance": 8,
     "seed": 102864
@@ -1115,6 +1184,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 59,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.5629005957906625,
     "tree_type": "balanced",
     "instance": 9,
     "seed": 102907
@@ -1131,6 +1201,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 55,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.565278606978026,
     "tree_type": "balanced",
     "instance": 10,
     "seed": 102950
@@ -1147,6 +1218,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 56,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.564271944363744,
     "tree_type": "balanced",
     "instance": 11,
     "seed": 102993
@@ -1163,6 +1235,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 56,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.5650955139694585,
     "tree_type": "balanced",
     "instance": 12,
     "seed": 103036
@@ -1179,6 +1252,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 58,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.563723214940992,
     "tree_type": "balanced",
     "instance": 13,
     "seed": 103079
@@ -1195,6 +1269,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 58,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.5640890063933224,
     "tree_type": "balanced",
     "instance": 14,
     "seed": 103122
@@ -1211,6 +1286,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 58,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.5666527043094476,
     "tree_type": "balanced",
     "instance": 15,
     "seed": 103165
@@ -1227,6 +1303,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 57,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.565278606978026,
     "tree_type": "balanced",
     "instance": 16,
     "seed": 103208
@@ -1243,6 +1320,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 57,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.56518705694766,
     "tree_type": "balanced",
     "instance": 17,
     "seed": 103251
@@ -1259,6 +1337,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 57,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.5636317846744143,
     "tree_type": "balanced",
     "instance": 18,
     "seed": 103294
@@ -1275,6 +1354,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 57,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.563906096588147,
     "tree_type": "balanced",
     "instance": 19,
     "seed": 103337
@@ -1291,6 +1371,7 @@
     "max_degree": 6,
     "avg_degree": 1.98,
     "internal_nodes": 46,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.8282908080150846,
     "tree_type": "caterpillar",
     "instance": 0,
     "seed": 103360
@@ -1307,6 +1388,7 @@
     "max_degree": 6,
     "avg_degree": 1.98,
     "internal_nodes": 47,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.6990169767446273,
     "tree_type": "caterpillar",
     "instance": 1,
     "seed": 103403
@@ -1323,6 +1405,7 @@
     "max_degree": 7,
     "avg_degree": 1.98,
     "internal_nodes": 45,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.9471820500723944,
     "tree_type": "caterpillar",
     "instance": 2,
     "seed": 103446
@@ -1339,6 +1422,7 @@
     "max_degree": 9,
     "avg_degree": 1.98,
     "internal_nodes": 45,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.947865539425115,
     "tree_type": "caterpillar",
     "instance": 3,
     "seed": 103489
@@ -1355,6 +1439,7 @@
     "max_degree": 7,
     "avg_degree": 1.98,
     "internal_nodes": 50,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.9318660811108668,
     "tree_type": "caterpillar",
     "instance": 4,
     "seed": 103532
@@ -1371,6 +1456,7 @@
     "max_degree": 7,
     "avg_degree": 1.98,
     "internal_nodes": 48,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.7975513304864963,
     "tree_type": "caterpillar",
     "instance": 5,
     "seed": 103575
@@ -1387,6 +1473,7 @@
     "max_degree": 8,
     "avg_degree": 1.98,
     "internal_nodes": 50,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.981606441369927,
     "tree_type": "caterpillar",
     "instance": 6,
     "seed": 103618
@@ -1403,6 +1490,7 @@
     "max_degree": 7,
     "avg_degree": 1.98,
     "internal_nodes": 51,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.863104090748094,
     "tree_type": "caterpillar",
     "instance": 7,
     "seed": 103661
@@ -1419,6 +1507,7 @@
     "max_degree": 7,
     "avg_degree": 1.98,
     "internal_nodes": 49,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.7554985758156323,
     "tree_type": "caterpillar",
     "instance": 8,
     "seed": 103704
@@ -1435,6 +1524,7 @@
     "max_degree": 7,
     "avg_degree": 1.98,
     "internal_nodes": 49,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.9138170363347036,
     "tree_type": "caterpillar",
     "instance": 9,
     "seed": 103747
@@ -1451,6 +1541,7 @@
     "max_degree": 7,
     "avg_degree": 1.98,
     "internal_nodes": 50,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.8778631231386265,
     "tree_type": "caterpillar",
     "instance": 10,
     "seed": 103790
@@ -1467,6 +1558,7 @@
     "max_degree": 6,
     "avg_degree": 1.98,
     "internal_nodes": 51,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.843226198232145,
     "tree_type": "caterpillar",
     "instance": 11,
     "seed": 103833
@@ -1483,6 +1575,7 @@
     "max_degree": 8,
     "avg_degree": 1.98,
     "internal_nodes": 49,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.8681804068887735,
     "tree_type": "caterpillar",
     "instance": 12,
     "seed": 103876
@@ -1499,6 +1592,7 @@
     "max_degree": 8,
     "avg_degree": 1.98,
     "internal_nodes": 48,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.9492335839771373,
     "tree_type": "caterpillar",
     "instance": 13,
     "seed": 103919
@@ -1515,6 +1609,7 @@
     "max_degree": 7,
     "avg_degree": 1.98,
     "internal_nodes": 51,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.814368782093311,
     "tree_type": "caterpillar",
     "instance": 14,
     "seed": 103962
@@ -1531,6 +1626,7 @@
     "max_degree": 9,
     "avg_degree": 1.98,
     "internal_nodes": 49,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.9098263676765854,
     "tree_type": "caterpillar",
     "instance": 15,
     "seed": 104005
@@ -1547,6 +1643,7 @@
     "max_degree": 9,
     "avg_degree": 1.98,
     "internal_nodes": 50,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.742617737163223,
     "tree_type": "caterpillar",
     "instance": 16,
     "seed": 104048
@@ -1563,6 +1660,7 @@
     "max_degree": 6,
     "avg_degree": 1.98,
     "internal_nodes": 47,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.87927758433882,
     "tree_type": "caterpillar",
     "instance": 17,
     "seed": 104091
@@ -1579,6 +1677,7 @@
     "max_degree": 7,
     "avg_degree": 1.98,
     "internal_nodes": 43,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.8989445922085397,
     "tree_type": "caterpillar",
     "instance": 18,
     "seed": 104134
@@ -1595,6 +1694,7 @@
     "max_degree": 6,
     "avg_degree": 1.98,
     "internal_nodes": 54,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 3.7974406969536623,
     "tree_type": "caterpillar",
     "instance": 19,
     "seed": 104177
@@ -1611,6 +1711,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 0,
     "seed": 104200
@@ -1627,6 +1728,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 1,
     "seed": 104243
@@ -1643,6 +1745,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 2,
     "seed": 104286
@@ -1659,6 +1762,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 3,
     "seed": 104329
@@ -1675,6 +1779,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 4,
     "seed": 104372
@@ -1691,6 +1796,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 5,
     "seed": 104415
@@ -1707,6 +1813,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 6,
     "seed": 104458
@@ -1723,6 +1830,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 7,
     "seed": 104501
@@ -1739,6 +1847,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 8,
     "seed": 104544
@@ -1755,6 +1864,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 9,
     "seed": 104587
@@ -1771,6 +1881,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 10,
     "seed": 104630
@@ -1787,6 +1898,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 11,
     "seed": 104673
@@ -1803,6 +1915,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 12,
     "seed": 104716
@@ -1819,6 +1932,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 13,
     "seed": 104759
@@ -1835,6 +1949,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 14,
     "seed": 104802
@@ -1851,6 +1966,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 15,
     "seed": 104845
@@ -1867,6 +1983,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 16,
     "seed": 104888
@@ -1883,6 +2000,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 17,
     "seed": 104931
@@ -1899,6 +2017,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 18,
     "seed": 104974
@@ -1915,6 +2034,7 @@
     "max_degree": 2,
     "avg_degree": 1.98,
     "internal_nodes": 98,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7234549688642784,
     "tree_type": "binary",
     "instance": 19,
     "seed": 105017
@@ -1931,6 +2051,7 @@
     "max_degree": 4,
     "avg_degree": 1.98,
     "internal_nodes": 96,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7273775065167116,
     "tree_type": "spider",
     "instance": 0,
     "seed": 105040
@@ -1947,6 +2068,7 @@
     "max_degree": 4,
     "avg_degree": 1.98,
     "internal_nodes": 96,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.9841894753313627,
     "tree_type": "spider",
     "instance": 1,
     "seed": 105083
@@ -1963,6 +2085,7 @@
     "max_degree": 6,
     "avg_degree": 1.98,
     "internal_nodes": 94,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7326967513063218,
     "tree_type": "spider",
     "instance": 2,
     "seed": 105126
@@ -1979,6 +2102,7 @@
     "max_degree": 5,
     "avg_degree": 1.98,
     "internal_nodes": 95,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7335380858066645,
     "tree_type": "spider",
     "instance": 3,
     "seed": 105169
@@ -1995,6 +2119,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 97,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7636188650434994,
     "tree_type": "spider",
     "instance": 4,
     "seed": 105212
@@ -2011,6 +2136,7 @@
     "max_degree": 5,
     "avg_degree": 1.98,
     "internal_nodes": 95,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 2.096862961501989,
     "tree_type": "spider",
     "instance": 5,
     "seed": 105255
@@ -2027,6 +2153,7 @@
     "max_degree": 4,
     "avg_degree": 1.98,
     "internal_nodes": 96,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.8992391330426734,
     "tree_type": "spider",
     "instance": 6,
     "seed": 105298
@@ -2043,6 +2170,7 @@
     "max_degree": 4,
     "avg_degree": 1.98,
     "internal_nodes": 96,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7483763312975529,
     "tree_type": "spider",
     "instance": 7,
     "seed": 105341
@@ -2059,6 +2187,7 @@
     "max_degree": 8,
     "avg_degree": 1.98,
     "internal_nodes": 92,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.8306610495677884,
     "tree_type": "spider",
     "instance": 8,
     "seed": 105384
@@ -2075,6 +2204,7 @@
     "max_degree": 5,
     "avg_degree": 1.98,
     "internal_nodes": 95,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7697064252279904,
     "tree_type": "spider",
     "instance": 9,
     "seed": 105427
@@ -2091,6 +2221,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 97,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7497978569994856,
     "tree_type": "spider",
     "instance": 10,
     "seed": 105470
@@ -2107,6 +2238,7 @@
     "max_degree": 5,
     "avg_degree": 1.98,
     "internal_nodes": 95,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.8093133133301436,
     "tree_type": "spider",
     "instance": 11,
     "seed": 105513
@@ -2123,6 +2255,7 @@
     "max_degree": 4,
     "avg_degree": 1.98,
     "internal_nodes": 96,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.9791977957874345,
     "tree_type": "spider",
     "instance": 12,
     "seed": 105556
@@ -2139,6 +2272,7 @@
     "max_degree": 4,
     "avg_degree": 1.98,
     "internal_nodes": 96,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.8341787222409243,
     "tree_type": "spider",
     "instance": 13,
     "seed": 105599
@@ -2155,6 +2289,7 @@
     "max_degree": 4,
     "avg_degree": 1.98,
     "internal_nodes": 96,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.778323400272267,
     "tree_type": "spider",
     "instance": 14,
     "seed": 105642
@@ -2171,6 +2306,7 @@
     "max_degree": 6,
     "avg_degree": 1.98,
     "internal_nodes": 94,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 2.004849907568483,
     "tree_type": "spider",
     "instance": 15,
     "seed": 105685
@@ -2187,6 +2323,7 @@
     "max_degree": 7,
     "avg_degree": 1.98,
     "internal_nodes": 93,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7946851598939557,
     "tree_type": "spider",
     "instance": 16,
     "seed": 105728
@@ -2203,6 +2340,7 @@
     "max_degree": 8,
     "avg_degree": 1.98,
     "internal_nodes": 92,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.9386076726493193,
     "tree_type": "spider",
     "instance": 17,
     "seed": 105771
@@ -2219,6 +2357,7 @@
     "max_degree": 6,
     "avg_degree": 1.98,
     "internal_nodes": 94,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 2.039508263382155,
     "tree_type": "spider",
     "instance": 18,
     "seed": 105814
@@ -2235,6 +2374,7 @@
     "max_degree": 3,
     "avg_degree": 1.98,
     "internal_nodes": 97,
+    "hypergraph_omega_sqrt_n_D_lower_bound_val": 1.7466083231604193,
     "tree_type": "spider",
     "instance": 19,
     "seed": 105857

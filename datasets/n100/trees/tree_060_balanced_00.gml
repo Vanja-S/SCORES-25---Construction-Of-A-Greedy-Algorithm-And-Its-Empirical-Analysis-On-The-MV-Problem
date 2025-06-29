@@ -8,6 +8,7 @@ graph [
   max_degree 3
   avg_degree 1.98
   internal_nodes 56
+  hypergraph_omega_sqrt_n_D_lower_bound_val 3.565370164061463
   tree_type "balanced"
   instance 0
   graph_id 60

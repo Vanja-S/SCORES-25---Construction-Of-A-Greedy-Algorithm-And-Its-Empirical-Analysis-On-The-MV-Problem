@@ -8,6 +8,7 @@ graph [
   max_degree 4
   avg_degree 1.98
   internal_nodes 96
+  hypergraph_omega_sqrt_n_D_lower_bound_val 1.7483763312975529
   tree_type "spider"
   instance 7
   graph_id 127

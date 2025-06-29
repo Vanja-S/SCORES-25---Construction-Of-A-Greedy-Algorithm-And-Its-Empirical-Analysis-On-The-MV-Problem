@@ -2,7 +2,7 @@ import networkx as nx
 import os
 import json
 import time
-
+import traceback
 from mv_algorithms import (
     bfs_mv, mv, greedy_mutual_visibility,
     get_one_shortest_path_and_internal_vertices, build_mv_hypergraph,
@@ -27,7 +27,7 @@ def run_dataset_experiments(dataset_base_path="datasets"):
     results = [] 
     
     size_categories = ["n10"] #
-    graph_types = ["trees", "grids"] #
+    graph_types = ["trees", "grids", "tori", "petersen", "mycielskian", "complete", "erdos_renyi"] 
 
     for size_cat in size_categories:
         for graph_type in graph_types:
@@ -59,7 +59,20 @@ def run_dataset_experiments(dataset_base_path="datasets"):
                         num_edges = G.number_of_edges() 
                         
                         true_mv_num = G.graph.get("mutual_visibility_number", None)
+                        if true_mv_num == "None":
+                            true_mv_num = None
                         print(f"  Processing {gml_file} (Nodes: {num_nodes}, Edges: {num_edges}, True MV: {true_mv_num if true_mv_num is not None else 'N/A'})")
+
+                        # Retrieve the specific bounds from graph attributes as populated by generators
+                        mutual_visibility_lower_bound_val = G.graph.get("mutual_visibility_lower_bound", None)
+                        mutual_visibility_upper_bound_val = G.graph.get("mutual_visibility_upper_bound", None)
+
+                        if (true_mv_num is not None):
+                            mutual_visibility_lower_bound_val = true_mv_num
+                            mutual_visibility_upper_bound_val = true_mv_num
+
+                        hypergraph_omega_sqrt_n_D_lower_bound_val = G.graph.get("hypergraph_omega_sqrt_n_D_lower_bound_val", None)
+
 
                         # --- Run Algorithm 1: Direct Greedy Mutual Visibility ---
                         start_time_direct = time.time()
@@ -80,6 +93,8 @@ def run_dataset_experiments(dataset_base_path="datasets"):
                         size_ga = len(mv_set_ga)
                         
                         # Calculate approximation ratios if true_mv_num is known
+                        
+
                         ratio_direct = size_direct / true_mv_num if true_mv_num is not None and true_mv_num > 0 else (1.0 if true_mv_num == 0 and size_direct == 0 else None)
                         ratio_hyper = size_hyper / true_mv_num if true_mv_num is not None and true_mv_num > 0 else (1.0 if true_mv_num == 0 and size_hyper == 0 else None)
                         ratio_ga = size_ga / true_mv_num if true_mv_num is not None and true_mv_num > 0 else (1.0 if true_mv_num == 0 and size_ga == 0 else None)
@@ -100,10 +115,14 @@ def run_dataset_experiments(dataset_base_path="datasets"):
                             "genetic_algo_size": size_ga,
                             "genetic_algo_runtime": runtime_ga,
                             "genetic_algo_ratio": ratio_ga,
+                            "mutual_visibility_lower_bound": mutual_visibility_lower_bound_val,
+                            "mutual_visibility_upper_bound": mutual_visibility_upper_bound_val,
+                            "hypergraph_omega_sqrt_n_D_lower_bound": hypergraph_omega_sqrt_n_D_lower_bound_val,
                         })
 
                     except Exception as e:
-                        print(f"  Error processing {gml_file}: {e}")
+                        print(f"Error processing {gml_file}: {e}")
+                        traceback.print_exc()
     
     return results
 

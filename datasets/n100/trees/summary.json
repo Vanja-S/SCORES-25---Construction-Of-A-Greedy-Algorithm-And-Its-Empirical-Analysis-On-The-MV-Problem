@@ -2,13 +2,13 @@
   "size": 100,
   "total_graphs": 140,
   "type_distribution": {
-    "binary": 20,
-    "caterpillar": 20,
-    "path": 20,
-    "star": 20,
     "spider": 20,
+    "caterpillar": 20,
+    "balanced": 20,
+    "path": 20,
+    "binary": 20,
     "random": 20,
-    "balanced": 20
+    "star": 20
   },
   "mutual_visibility_stats": {
     "min_leaves": 2,

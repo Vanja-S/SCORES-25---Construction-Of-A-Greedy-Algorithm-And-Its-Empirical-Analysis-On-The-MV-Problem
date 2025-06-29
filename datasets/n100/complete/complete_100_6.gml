@@ -1,4 +1,24 @@
 graph [
+  filename "complete_100_6.gml"
+  graph_id "complete_100_6"
+  nodes 100
+  edges 4950
+  diameter 1
+  girth 3
+  avg_degree 99
+  max_degree 99
+  avg_shortest_path_length 1.0
+  mutual_visibility_number 100
+  mutual_visibility_lower_bound 100
+  mutual_visibility_upper_bound 100
+  general_lb_max_degree 99
+  general_ub_diameter_based 100
+  general_ub_girth_based 100
+  hypergraph_omega_sqrt_n_D_lower_bound_val 10.0
+  graph_type "complete"
+  size_category "n100"
+  instance 6
+  seed "None"
   node [
     id 0
     label "0"

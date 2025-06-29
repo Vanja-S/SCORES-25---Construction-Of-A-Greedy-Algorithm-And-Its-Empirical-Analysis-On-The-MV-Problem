@@ -11,11 +11,5 @@
     "min": 2,
     "max": 3,
     "avg": 2.5
-  },
-  "parameter_ranges": {
-    "n_min": 5,
-    "n_max": 5,
-    "k_min": 1,
-    "k_max": 2
   }
 }

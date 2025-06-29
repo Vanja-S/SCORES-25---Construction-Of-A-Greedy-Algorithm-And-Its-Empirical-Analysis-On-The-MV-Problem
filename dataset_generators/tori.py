@@ -32,6 +32,19 @@ def get_torus_properties(G, n, m):
     # The exact mutual visibility number is not known, but mv <= 3 * min(m, n)
     mutual_visibility_upper_bound = 3 * min(n, m)
 
+    if nodes > 1000: 
+        print(f"    Skipping average shortest path length calculation for M(G) n={nodes} (potentially slow).")
+    elif nodes > 0:
+        try: 
+            mycielskian_avg_shortest_path_length = nx.average_shortest_path_length(G)
+        except nx.NetworkXError: 
+            pass 
+    
+    hypergraph_omega_sqrt_n_D_lower_bound_val = None
+    if mycielskian_avg_shortest_path_length is not None and mycielskian_avg_shortest_path_length > 0:
+        hypergraph_omega_sqrt_n_D_lower_bound_val = math.sqrt(nodes / mycielskian_avg_shortest_path_length)
+
+
     return {
         "nodes": nodes,
         "edges": edges,
@@ -39,6 +52,7 @@ def get_torus_properties(G, n, m):
         "torus_width": n,
         "torus_height": m,
         "mutual_visibility_upper_bound": mutual_visibility_upper_bound,
+        "hypergraph_omega_sqrt_n_D_lower_bound_val": hypergraph_omega_sqrt_n_D_lower_bound_val,
         "diameter": diameter,
         "radius": radius,
         "center_size": center_size,
@@ -339,7 +353,6 @@ def generate_torus_dataset():
     size_configs = [
         {"target": 10, "instances": 15, "label": "n10"},
         {"target": 100, "instances": 20, "label": "n100"},
-        {"target": 1000, "instances": 30, "label": "n1000"},
     ]
 
     # Base directory for datasets
@@ -489,7 +502,7 @@ def verify_torus_dataset():
     print("🔍 Verifying torus dataset...")
 
     datasets_dir = Path("../datasets")
-    size_categories = ["n10", "n100", "n1000"]
+    size_categories = ["n10", "n100"]
 
     total_files = 0
     valid_tori = 0

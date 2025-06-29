@@ -6,6 +6,7 @@ graph [
   grid_width 10
   grid_height 9
   mutual_visibility_number 18
+  hypergraph_omega_sqrt_n_D_lower_bound_val 3.7696851746252595
   diameter 17
   radius 9
   center_size 2

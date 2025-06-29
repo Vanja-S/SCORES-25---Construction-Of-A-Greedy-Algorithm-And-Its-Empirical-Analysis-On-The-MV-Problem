@@ -1,4 +1,24 @@
 graph [
+  filename "complete_10_10.gml"
+  graph_id "complete_10_10"
+  nodes 10
+  edges 45
+  diameter 1
+  girth 3
+  avg_degree 9
+  max_degree 9
+  avg_shortest_path_length 1.0
+  mutual_visibility_number 10
+  mutual_visibility_lower_bound 10
+  mutual_visibility_upper_bound 10
+  general_lb_max_degree 9
+  general_ub_diameter_based 10
+  general_ub_girth_based 10
+  hypergraph_omega_sqrt_n_D_lower_bound_val 3.1622776601683795
+  graph_type "complete"
+  size_category "n10"
+  instance 10
+  seed "None"
   node [
     id 0
     label "0"

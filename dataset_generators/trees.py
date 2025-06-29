@@ -26,6 +26,19 @@ def get_tree_properties(G):
     max_degree = max(degrees)
     avg_degree = sum(degrees) / len(degrees)
 
+    if n > 300: 
+        print(f"    Skipping average shortest path length calculation for M(G) n={n} (potentially slow).")
+    elif n > 0:
+        try: 
+            mycielskian_avg_shortest_path_length = nx.average_shortest_path_length(G)
+        except nx.NetworkXError: 
+            pass 
+    
+    hypergraph_omega_sqrt_n_D_lower_bound_val = None
+    if mycielskian_avg_shortest_path_length is not None and mycielskian_avg_shortest_path_length > 0:
+        hypergraph_omega_sqrt_n_D_lower_bound_val = math.sqrt(n / mycielskian_avg_shortest_path_length)
+    
+
     return {
         "nodes": n,
         "mutual_visibility_number": leaves,  # This is your target variable
@@ -36,6 +49,7 @@ def get_tree_properties(G):
         "max_degree": max_degree,
         "avg_degree": round(avg_degree, 3),
         "internal_nodes": n - leaves,
+        "hypergraph_omega_sqrt_n_D_lower_bound_val": hypergraph_omega_sqrt_n_D_lower_bound_val,
         "tree_type": None,  # Will be set by generator
     }
 
@@ -201,7 +215,7 @@ def generate_spider_tree(n, seed):
 
 def create_folder_structure():
     """Create the required folder structure"""
-    sizes = [10, 100, 1000]
+    sizes = [10, 100]
 
     # Get the project root directory (parent of current script directory)
     script_dir = Path(__file__).parent
@@ -229,7 +243,7 @@ def generate_tree_dataset():
     project_root = create_folder_structure()
 
     # Dataset configuration
-    sizes = [10, 100, 1000]
+    sizes = [10, 100]
     tree_generators = [
         ("random", generate_random_tree),
         ("star", generate_star_tree),
@@ -244,7 +258,6 @@ def generate_tree_dataset():
     instances_per_type = {
         10: 15,
         100: 20,
-        1000: 30,
     }
 
     all_dataset_info = {}
@@ -502,7 +515,7 @@ def verify_dataset_integrity(project_root):
     Returns:
         dict: Summary of verification results
     """
-    sizes = [10, 100, 1000]
+    sizes = [10, 100]
     verification_results = {}
 
     print("🔍 Verifying tree dataset...")

@@ -1,0 +1,10 @@
+graph [
+  nodes 916
+  edges 1599
+  grid_dimensions 229
+  grid_dimensions 4
+  grid_width 229
+  grid_height 4
+  mutual_visibility_number 8
+  mutual_visibility_lower_bound 8
+  mutual_visibility_upper_bound 8

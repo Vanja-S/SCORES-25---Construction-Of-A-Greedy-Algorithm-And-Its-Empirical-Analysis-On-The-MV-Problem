@@ -8,6 +8,7 @@ graph [
   max_degree 99
   avg_degree 1.98
   internal_nodes 1
+  hypergraph_omega_sqrt_n_D_lower_bound_val 7.106690545187014
   tree_type "star"
   instance 10
   graph_id 30

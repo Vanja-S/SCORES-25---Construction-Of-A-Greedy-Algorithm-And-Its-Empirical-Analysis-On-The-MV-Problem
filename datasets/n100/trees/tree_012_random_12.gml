@@ -8,6 +8,7 @@ graph [
   max_degree 5
   avg_degree 1.98
   internal_nodes 64
+  hypergraph_omega_sqrt_n_D_lower_bound_val 3.0722075675895444
   tree_type "random"
   instance 12
   graph_id 12

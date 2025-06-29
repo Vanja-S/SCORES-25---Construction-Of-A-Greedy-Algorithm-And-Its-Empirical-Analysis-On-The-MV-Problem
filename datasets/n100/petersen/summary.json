@@ -5,17 +5,11 @@
   "node_count_range": {
     "min": 90,
     "max": 98,
-    "avg": 93.54
+    "avg": 93.46
   },
   "diameter_range": {
     "min": 7,
     "max": 25,
-    "avg": 9.6
-  },
-  "parameter_ranges": {
-    "n_min": 45,
-    "n_max": 49,
-    "k_min": 1,
-    "k_max": 23
+    "avg": 9.73
   }
 }

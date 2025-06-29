@@ -1,4 +1,31 @@
 graph [
+  nodes 96
+  edges 120
+  petersen_n 48
+  petersen_k 24
+  is_connected 1
+  is_3_regular 0
+  diameter 14
+  radius 13
+  center_size 48
+  max_degree 3
+  min_degree 2
+  avg_degree 2.5
+  girth "None"
+  is_planar 0
+  clustering_coefficient 0.0
+  density 0.02631578947368421
+  avg_shortest_path_length 7.768421052631579
+  hypergraph_omega_sqrt_n_D_lower_bound_val 3.5153553984249974
+  mutual_visibility_number "None"
+  mutual_visibility_lower_bound "None"
+  mutual_visibility_upper_bound "None"
+  graph_type "petersen"
+  size_category "n100"
+  instance 91
+  seed 10091
+  filename "petersen_091_gp_48_24.gml"
+  graph_id 91
   node [
     id 0
     label "0"

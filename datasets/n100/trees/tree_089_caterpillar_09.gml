@@ -8,6 +8,7 @@ graph [
   max_degree 7
   avg_degree 1.98
   internal_nodes 49
+  hypergraph_omega_sqrt_n_D_lower_bound_val 3.9138170363347036
   tree_type "caterpillar"
   instance 9
   graph_id 89

@@ -1,14 +1,12 @@
 {
   "dataset_sizes": [
     "n10",
-    "n100",
-    "n1000"
+    "n100"
   ],
-  "total_trees": 455,
+  "total_trees": 245,
   "trees_per_size": {
     "n10": 105,
-    "n100": 140,
-    "n1000": 210
+    "n100": 140
   },
   "mutual_visibility_ranges": {
     "n10": {
@@ -20,11 +18,6 @@
       "min": 2,
       "max": 99,
       "avg": 34.28
-    },
-    "n1000": {
-      "min": 2,
-      "max": 999,
-      "avg": 338.66
     }
   }
 }

@@ -1,4 +1,25 @@
 graph [
+  filename "er_100_005_3.gml"
+  graph_id "er_100_005_3"
+  nodes 100
+  edges 235
+  p_value 0.05
+  diameter 6
+  girth "None"
+  avg_degree 4.7
+  max_degree 12
+  avg_shortest_path_length 3.113737373737374
+  mutual_visibility_number "None"
+  mutual_visibility_lower_bound "None"
+  mutual_visibility_upper_bound "None"
+  general_lb_max_degree 12
+  general_ub_diameter_based 95
+  general_ub_girth_based "None"
+  hypergraph_omega_sqrt_n_D_lower_bound_val 5.667075652204036
+  graph_type "erdos_renyi"
+  size_category "n100"
+  instance 3
+  seed "None"
   node [
     id 0
     label "0"
@@ -401,23 +422,23 @@ graph [
   ]
   edge [
     source 0
-    target 7
+    target 36
   ]
   edge [
     source 0
-    target 57
+    target 40
   ]
   edge [
     source 0
-    target 78
+    target 45
   ]
   edge [
     source 0
-    target 98
+    target 71
   ]
   edge [
     source 0
-    target 99
+    target 91
   ]
   edge [
     source 1
@@ -425,211 +446,143 @@ graph [
   ]
   edge [
     source 1
-    target 9
+    target 23
   ]
   edge [
     source 1
-    target 41
+    target 60
   ]
   edge [
     source 1
-    target 54
+    target 66
   ]
   edge [
     source 1
-    target 59
-  ]
-  edge [
-    source 1
-    target 62
-  ]
-  edge [
-    source 1
-    target 76
-  ]
-  edge [
-    source 1
-    target 86
-  ]
-  edge [
-    source 1
-    target 90
-  ]
-  edge [
-    source 1
-    target 97
+    target 99
   ]
   edge [
     source 2
-    target 19
+    target 18
   ]
   edge [
     source 2
-    target 35
+    target 38
   ]
   edge [
     source 2
-    target 57
-  ]
-  edge [
-    source 2
-    target 62
-  ]
-  edge [
-    source 2
-    target 74
-  ]
-  edge [
-    source 2
-    target 76
-  ]
-  edge [
-    source 2
-    target 94
-  ]
-  edge [
-    source 2
-    target 95
-  ]
-  edge [
-    source 3
-    target 7
-  ]
-  edge [
-    source 3
     target 44
   ]
   edge [
-    source 3
-    target 47
+    source 2
+    target 51
+  ]
+  edge [
+    source 2
+    target 96
   ]
   edge [
     source 3
-    target 61
+    target 13
   ]
   edge [
     source 3
-    target 72
+    target 21
   ]
   edge [
     source 3
-    target 74
+    target 34
   ]
   edge [
     source 3
-    target 81
+    target 67
   ]
   edge [
-    source 4
-    target 24
+    source 3
+    target 69
   ]
   edge [
-    source 4
-    target 37
-  ]
-  edge [
-    source 4
-    target 46
-  ]
-  edge [
-    source 4
-    target 49
-  ]
-  edge [
-    source 4
+    source 3
     target 71
   ]
   edge [
     source 4
-    target 87
+    target 6
   ]
   edge [
     source 4
-    target 99
+    target 20
   ]
   edge [
-    source 5
-    target 19
+    source 4
+    target 86
   ]
   edge [
-    source 5
-    target 23
-  ]
-  edge [
-    source 5
-    target 37
-  ]
-  edge [
-    source 5
-    target 72
-  ]
-  edge [
-    source 6
-    target 10
-  ]
-  edge [
-    source 6
-    target 28
-  ]
-  edge [
-    source 6
-    target 42
-  ]
-  edge [
-    source 6
-    target 54
-  ]
-  edge [
-    source 6
-    target 76
-  ]
-  edge [
-    source 6
-    target 90
-  ]
-  edge [
-    source 6
-    target 95
-  ]
-  edge [
-    source 6
-    target 96
-  ]
-  edge [
-    source 7
-    target 23
-  ]
-  edge [
-    source 7
-    target 46
-  ]
-  edge [
-    source 7
-    target 72
-  ]
-  edge [
-    source 7
+    source 4
     target 94
   ]
   edge [
-    source 8
-    target 37
+    source 5
+    target 16
+  ]
+  edge [
+    source 5
+    target 18
+  ]
+  edge [
+    source 6
+    target 8
+  ]
+  edge [
+    source 6
+    target 11
+  ]
+  edge [
+    source 6
+    target 33
+  ]
+  edge [
+    source 6
+    target 36
+  ]
+  edge [
+    source 6
+    target 56
+  ]
+  edge [
+    source 7
+    target 34
+  ]
+  edge [
+    source 7
+    target 59
+  ]
+  edge [
+    source 7
+    target 69
   ]
   edge [
     source 8
-    target 64
+    target 17
   ]
   edge [
     source 8
-    target 81
+    target 61
   ]
   edge [
     source 8
-    target 98
+    target 69
   ]
   edge [
     source 9
-    target 30
+    target 34
+  ]
+  edge [
+    source 9
+    target 37
+  ]
+  edge [
+    source 9
+    target 38
   ]
   edge [
     source 9
@@ -637,279 +590,275 @@ graph [
   ]
   edge [
     source 9
-    target 53
+    target 63
   ]
   edge [
     source 9
-    target 62
+    target 75
   ]
   edge [
     source 9
-    target 66
-  ]
-  edge [
-    source 10
-    target 49
-  ]
-  edge [
-    source 10
-    target 52
-  ]
-  edge [
-    source 10
-    target 66
-  ]
-  edge [
-    source 10
-    target 96
-  ]
-  edge [
-    source 11
-    target 15
-  ]
-  edge [
-    source 11
-    target 92
-  ]
-  edge [
-    source 12
-    target 22
-  ]
-  edge [
-    source 12
-    target 23
-  ]
-  edge [
-    source 13
-    target 21
-  ]
-  edge [
-    source 13
-    target 42
-  ]
-  edge [
-    source 13
-    target 69
-  ]
-  edge [
-    source 13
     target 85
   ]
   edge [
-    source 14
-    target 40
+    source 10
+    target 22
   ]
   edge [
-    source 14
+    source 10
+    target 27
+  ]
+  edge [
+    source 10
+    target 66
+  ]
+  edge [
+    source 10
+    target 70
+  ]
+  edge [
+    source 11
+    target 70
+  ]
+  edge [
+    source 11
+    target 89
+  ]
+  edge [
+    source 11
+    target 91
+  ]
+  edge [
+    source 12
+    target 14
+  ]
+  edge [
+    source 12
+    target 57
+  ]
+  edge [
+    source 12
+    target 61
+  ]
+  edge [
+    source 13
+    target 27
+  ]
+  edge [
+    source 13
+    target 32
+  ]
+  edge [
+    source 13
     target 51
   ]
   edge [
-    source 14
-    target 52
+    source 13
+    target 66
+  ]
+  edge [
+    source 13
+    target 81
+  ]
+  edge [
+    source 13
+    target 91
   ]
   edge [
     source 14
-    target 53
+    target 15
   ]
   edge [
     source 14
+    target 44
+  ]
+  edge [
+    source 14
+    target 86
+  ]
+  edge [
+    source 15
+    target 32
+  ]
+  edge [
+    source 15
+    target 37
+  ]
+  edge [
+    source 15
+    target 64
+  ]
+  edge [
+    source 15
     target 72
   ]
   edge [
-    source 14
+    source 15
     target 83
   ]
   edge [
     source 15
-    target 21
-  ]
-  edge [
-    source 15
-    target 56
-  ]
-  edge [
-    source 15
-    target 57
-  ]
-  edge [
-    source 15
-    target 68
-  ]
-  edge [
-    source 15
-    target 81
-  ]
-  edge [
-    source 15
-    target 95
-  ]
-  edge [
-    source 15
-    target 96
+    target 90
   ]
   edge [
     source 16
-    target 23
+    target 19
   ]
   edge [
     source 16
-    target 26
-  ]
-  edge [
-    source 16
-    target 57
-  ]
-  edge [
-    source 16
-    target 78
-  ]
-  edge [
-    source 16
-    target 99
-  ]
-  edge [
-    source 17
     target 31
   ]
   edge [
-    source 17
-    target 32
+    source 16
+    target 41
+  ]
+  edge [
+    source 16
+    target 97
   ]
   edge [
     source 17
-    target 51
+    target 22
   ]
   edge [
-    source 18
-    target 23
+    source 17
+    target 73
   ]
   edge [
-    source 18
-    target 45
-  ]
-  edge [
-    source 18
-    target 50
-  ]
-  edge [
-    source 18
-    target 57
-  ]
-  edge [
-    source 18
-    target 63
-  ]
-  edge [
-    source 19
-    target 75
-  ]
-  edge [
-    source 19
-    target 98
-  ]
-  edge [
-    source 20
-    target 56
-  ]
-  edge [
-    source 20
-    target 63
-  ]
-  edge [
-    source 20
-    target 65
-  ]
-  edge [
-    source 20
+    source 17
     target 86
   ]
   edge [
-    source 21
-    target 28
+    source 18
+    target 25
   ]
   edge [
-    source 21
-    target 41
-  ]
-  edge [
-    source 21
-    target 61
-  ]
-  edge [
-    source 21
-    target 67
-  ]
-  edge [
-    source 21
-    target 74
-  ]
-  edge [
-    source 22
+    source 18
     target 29
   ]
   edge [
-    source 22
-    target 35
+    source 18
+    target 34
   ]
   edge [
-    source 22
-    target 40
+    source 18
+    target 48
   ]
   edge [
-    source 23
-    target 37
+    source 18
+    target 57
   ]
   edge [
-    source 23
-    target 43
+    source 18
+    target 96
   ]
   edge [
-    source 23
-    target 52
+    source 19
+    target 67
   ]
   edge [
-    source 23
-    target 70
+    source 19
+    target 92
   ]
   edge [
-    source 24
-    target 31
+    source 20
+    target 55
   ]
   edge [
-    source 24
-    target 39
+    source 20
+    target 64
   ]
   edge [
-    source 24
-    target 41
+    source 20
+    target 79
   ]
   edge [
-    source 24
-    target 45
+    source 20
+    target 83
   ]
   edge [
-    source 24
-    target 75
+    source 21
+    target 25
   ]
   edge [
-    source 24
+    source 21
+    target 32
+  ]
+  edge [
+    source 21
     target 76
   ]
   edge [
-    source 24
-    target 99
+    source 22
+    target 23
   ]
   edge [
-    source 25
-    target 52
+    source 22
+    target 59
   ]
   edge [
-    source 25
+    source 22
+    target 78
+  ]
+  edge [
+    source 22
+    target 83
+  ]
+  edge [
+    source 23
+    target 38
+  ]
+  edge [
+    source 23
+    target 44
+  ]
+  edge [
+    source 23
+    target 62
+  ]
+  edge [
+    source 23
+    target 68
+  ]
+  edge [
+    source 23
     target 75
   ]
   edge [
+    source 23
+    target 94
+  ]
+  edge [
+    source 24
+    target 28
+  ]
+  edge [
+    source 24
+    target 58
+  ]
+  edge [
+    source 24
+    target 87
+  ]
+  edge [
+    source 24
+    target 92
+  ]
+  edge [
     source 25
-    target 80
+    target 39
+  ]
+  edge [
+    source 25
+    target 49
+  ]
+  edge [
+    source 25
+    target 88
+  ]
+  edge [
+    source 26
+    target 30
   ]
   edge [
     source 26
@@ -917,63 +866,67 @@ graph [
   ]
   edge [
     source 26
-    target 90
+    target 89
   ]
   edge [
     source 27
-    target 80
+    target 74
+  ]
+  edge [
+    source 27
+    target 76
   ]
   edge [
     source 28
-    target 30
+    target 51
   ]
   edge [
     source 28
-    target 36
+    target 68
   ]
   edge [
     source 28
-    target 79
+    target 81
+  ]
+  edge [
+    source 28
+    target 88
   ]
   edge [
     source 29
-    target 31
+    target 51
   ]
   edge [
     source 29
-    target 66
+    target 52
   ]
   edge [
     source 29
-    target 91
+    target 74
   ]
   edge [
     source 29
+    target 84
+  ]
+  edge [
+    source 30
+    target 63
+  ]
+  edge [
+    source 30
+    target 65
+  ]
+  edge [
+    source 30
     target 95
   ]
   edge [
-    source 29
-    target 96
+    source 31
+    target 47
   ]
   edge [
-    source 29
-    target 98
-  ]
-  edge [
-    source 30
-    target 31
-  ]
-  edge [
-    source 30
-    target 82
-  ]
-  edge [
-    source 30
-    target 91
-  ]
-  edge [
-    source 30
-    target 92
+    source 31
+    target 63
   ]
   edge [
     source 31
@@ -981,23 +934,19 @@ graph [
   ]
   edge [
     source 31
-    target 75
-  ]
-  edge [
-    source 31
-    target 87
-  ]
-  edge [
-    source 31
-    target 96
+    target 72
   ]
   edge [
     source 32
-    target 47
+    target 48
   ]
   edge [
     source 32
-    target 85
+    target 49
+  ]
+  edge [
+    source 32
+    target 88
   ]
   edge [
     source 32
@@ -1005,538 +954,410 @@ graph [
   ]
   edge [
     source 33
-    target 95
+    target 59
   ]
   edge [
-    source 34
-    target 51
-  ]
-  edge [
-    source 34
-    target 62
-  ]
-  edge [
-    source 34
-    target 71
-  ]
-  edge [
-    source 35
-    target 40
-  ]
-  edge [
-    source 35
-    target 57
-  ]
-  edge [
-    source 35
-    target 79
-  ]
-  edge [
-    source 35
-    target 88
-  ]
-  edge [
-    source 36
-    target 62
-  ]
-  edge [
-    source 36
-    target 86
-  ]
-  edge [
-    source 37
-    target 47
-  ]
-  edge [
-    source 38
-    target 47
-  ]
-  edge [
-    source 38
-    target 62
-  ]
-  edge [
-    source 38
-    target 73
-  ]
-  edge [
-    source 38
-    target 79
-  ]
-  edge [
-    source 38
-    target 89
-  ]
-  edge [
-    source 39
-    target 48
-  ]
-  edge [
-    source 39
-    target 66
-  ]
-  edge [
-    source 39
-    target 86
-  ]
-  edge [
-    source 39
-    target 92
-  ]
-  edge [
-    source 40
-    target 73
-  ]
-  edge [
-    source 40
-    target 76
-  ]
-  edge [
-    source 40
-    target 86
-  ]
-  edge [
-    source 40
-    target 97
-  ]
-  edge [
-    source 40
-    target 99
-  ]
-  edge [
-    source 41
-    target 70
-  ]
-  edge [
-    source 41
-    target 73
-  ]
-  edge [
-    source 42
-    target 64
-  ]
-  edge [
-    source 42
-    target 81
-  ]
-  edge [
-    source 43
-    target 70
-  ]
-  edge [
-    source 43
-    target 84
-  ]
-  edge [
-    source 43
-    target 89
-  ]
-  edge [
-    source 44
-    target 51
-  ]
-  edge [
-    source 44
-    target 70
-  ]
-  edge [
-    source 44
-    target 96
-  ]
-  edge [
-    source 45
-    target 46
-  ]
-  edge [
-    source 45
-    target 71
-  ]
-  edge [
-    source 46
-    target 49
-  ]
-  edge [
-    source 46
-    target 86
-  ]
-  edge [
-    source 47
-    target 49
-  ]
-  edge [
-    source 47
-    target 62
-  ]
-  edge [
-    source 47
-    target 71
-  ]
-  edge [
-    source 47
-    target 80
-  ]
-  edge [
-    source 48
-    target 49
-  ]
-  edge [
-    source 48
-    target 70
-  ]
-  edge [
-    source 48
-    target 89
-  ]
-  edge [
-    source 48
-    target 94
-  ]
-  edge [
-    source 48
-    target 98
-  ]
-  edge [
-    source 49
-    target 53
-  ]
-  edge [
-    source 49
-    target 55
-  ]
-  edge [
-    source 49
-    target 69
-  ]
-  edge [
-    source 49
-    target 74
-  ]
-  edge [
-    source 49
-    target 86
-  ]
-  edge [
-    source 49
-    target 89
-  ]
-  edge [
-    source 49
-    target 91
-  ]
-  edge [
-    source 49
-    target 98
-  ]
-  edge [
-    source 50
-    target 63
-  ]
-  edge [
-    source 50
+    source 33
     target 67
   ]
   edge [
-    source 50
-    target 72
-  ]
-  edge [
-    source 50
-    target 94
-  ]
-  edge [
-    source 51
-    target 52
-  ]
-  edge [
-    source 51
-    target 53
-  ]
-  edge [
-    source 51
-    target 64
-  ]
-  edge [
-    source 51
-    target 98
-  ]
-  edge [
-    source 52
-    target 66
-  ]
-  edge [
-    source 52
-    target 68
-  ]
-  edge [
-    source 52
-    target 75
-  ]
-  edge [
-    source 52
-    target 77
-  ]
-  edge [
-    source 52
-    target 93
-  ]
-  edge [
-    source 53
-    target 59
-  ]
-  edge [
-    source 53
-    target 80
-  ]
-  edge [
-    source 53
-    target 89
-  ]
-  edge [
-    source 54
-    target 59
-  ]
-  edge [
-    source 54
-    target 65
-  ]
-  edge [
-    source 54
-    target 70
-  ]
-  edge [
-    source 55
-    target 58
-  ]
-  edge [
-    source 55
-    target 74
-  ]
-  edge [
-    source 55
-    target 89
-  ]
-  edge [
-    source 56
-    target 65
-  ]
-  edge [
-    source 56
-    target 69
-  ]
-  edge [
-    source 56
-    target 77
-  ]
-  edge [
-    source 56
-    target 85
-  ]
-  edge [
-    source 56
-    target 91
-  ]
-  edge [
-    source 56
-    target 96
-  ]
-  edge [
-    source 57
-    target 69
-  ]
-  edge [
-    source 58
-    target 96
-  ]
-  edge [
-    source 59
-    target 87
-  ]
-  edge [
-    source 59
-    target 93
-  ]
-  edge [
-    source 59
-    target 97
-  ]
-  edge [
-    source 60
-    target 62
-  ]
-  edge [
-    source 60
-    target 82
-  ]
-  edge [
-    source 60
-    target 92
-  ]
-  edge [
-    source 61
-    target 74
-  ]
-  edge [
-    source 61
-    target 77
-  ]
-  edge [
-    source 61
-    target 78
-  ]
-  edge [
-    source 61
+    source 33
     target 86
   ]
   edge [
-    source 61
-    target 88
+    source 33
+    target 92
   ]
   edge [
-    source 63
-    target 66
+    source 34
+    target 77
   ]
   edge [
-    source 63
-    target 71
+    source 35
+    target 83
   ]
   edge [
-    source 63
-    target 72
-  ]
-  edge [
-    source 63
-    target 82
-  ]
-  edge [
-    source 63
-    target 90
-  ]
-  edge [
-    source 64
-    target 87
-  ]
-  edge [
-    source 64
-    target 94
-  ]
-  edge [
-    source 66
-    target 81
-  ]
-  edge [
-    source 67
-    target 85
-  ]
-  edge [
-    source 67
-    target 93
-  ]
-  edge [
-    source 68
-    target 69
-  ]
-  edge [
-    source 68
-    target 85
-  ]
-  edge [
-    source 69
-    target 91
-  ]
-  edge [
-    source 69
-    target 98
-  ]
-  edge [
-    source 70
-    target 95
-  ]
-  edge [
-    source 70
+    source 35
     target 97
   ]
   edge [
-    source 71
+    source 36
+    target 44
+  ]
+  edge [
+    source 36
     target 76
   ]
   edge [
-    source 72
-    target 74
-  ]
-  edge [
-    source 72
-    target 89
-  ]
-  edge [
-    source 74
-    target 86
-  ]
-  edge [
-    source 74
-    target 88
-  ]
-  edge [
-    source 75
-    target 86
-  ]
-  edge [
-    source 75
-    target 91
-  ]
-  edge [
-    source 76
-    target 92
-  ]
-  edge [
-    source 76
+    source 36
     target 94
   ]
   edge [
-    source 78
-    target 91
+    source 37
+    target 42
   ]
   edge [
-    source 80
-    target 94
+    source 37
+    target 43
   ]
   edge [
-    source 81
-    target 92
+    source 37
+    target 61
   ]
   edge [
-    source 82
-    target 94
+    source 37
+    target 70
   ]
   edge [
-    source 83
-    target 88
+    source 37
+    target 85
   ]
   edge [
-    source 83
-    target 98
+    source 38
+    target 48
   ]
   edge [
-    source 86
-    target 98
+    source 38
+    target 53
   ]
   edge [
-    source 88
-    target 90
+    source 38
+    target 64
   ]
   edge [
-    source 89
-    target 92
-  ]
-  edge [
-    source 89
+    source 38
     target 93
   ]
   edge [
-    source 94
+    source 38
     target 98
   ]
   edge [
-    source 95
+    source 39
+    target 52
+  ]
+  edge [
+    source 39
+    target 70
+  ]
+  edge [
+    source 40
+    target 53
+  ]
+  edge [
+    source 40
+    target 77
+  ]
+  edge [
+    source 41
+    target 50
+  ]
+  edge [
+    source 41
+    target 60
+  ]
+  edge [
+    source 41
+    target 89
+  ]
+  edge [
+    source 42
+    target 72
+  ]
+  edge [
+    source 42
+    target 81
+  ]
+  edge [
+    source 42
+    target 83
+  ]
+  edge [
+    source 43
+    target 50
+  ]
+  edge [
+    source 43
+    target 54
+  ]
+  edge [
+    source 43
+    target 81
+  ]
+  edge [
+    source 43
+    target 90
+  ]
+  edge [
+    source 43
+    target 91
+  ]
+  edge [
+    source 45
+    target 66
+  ]
+  edge [
+    source 45
+    target 95
+  ]
+  edge [
+    source 46
+    target 85
+  ]
+  edge [
+    source 47
+    target 66
+  ]
+  edge [
+    source 47
+    target 72
+  ]
+  edge [
+    source 48
+    target 98
+  ]
+  edge [
+    source 49
+    target 77
+  ]
+  edge [
+    source 49
+    target 86
+  ]
+  edge [
+    source 49
+    target 87
+  ]
+  edge [
+    source 50
+    target 65
+  ]
+  edge [
+    source 50
+    target 66
+  ]
+  edge [
+    source 51
+    target 66
+  ]
+  edge [
+    source 52
+    target 66
+  ]
+  edge [
+    source 52
+    target 70
+  ]
+  edge [
+    source 52
+    target 77
+  ]
+  edge [
+    source 52
+    target 91
+  ]
+  edge [
+    source 53
+    target 56
+  ]
+  edge [
+    source 53
+    target 81
+  ]
+  edge [
+    source 54
+    target 62
+  ]
+  edge [
+    source 55
+    target 79
+  ]
+  edge [
+    source 55
+    target 87
+  ]
+  edge [
+    source 55
+    target 97
+  ]
+  edge [
+    source 56
+    target 61
+  ]
+  edge [
+    source 56
+    target 73
+  ]
+  edge [
+    source 57
+    target 68
+  ]
+  edge [
+    source 57
+    target 78
+  ]
+  edge [
+    source 58
+    target 66
+  ]
+  edge [
+    source 58
+    target 77
+  ]
+  edge [
+    source 58
+    target 86
+  ]
+  edge [
+    source 59
+    target 73
+  ]
+  edge [
+    source 59
+    target 77
+  ]
+  edge [
+    source 59
+    target 95
+  ]
+  edge [
+    source 60
+    target 68
+  ]
+  edge [
+    source 60
+    target 80
+  ]
+  edge [
+    source 60
     target 96
+  ]
+  edge [
+    source 61
+    target 69
+  ]
+  edge [
+    source 63
+    target 92
+  ]
+  edge [
+    source 63
+    target 95
+  ]
+  edge [
+    source 65
+    target 68
+  ]
+  edge [
+    source 66
+    target 88
+  ]
+  edge [
+    source 66
+    target 93
+  ]
+  edge [
+    source 66
+    target 95
+  ]
+  edge [
+    source 67
+    target 71
+  ]
+  edge [
+    source 68
+    target 70
+  ]
+  edge [
+    source 68
+    target 95
+  ]
+  edge [
+    source 69
+    target 72
+  ]
+  edge [
+    source 70
+    target 98
+  ]
+  edge [
+    source 71
+    target 96
+  ]
+  edge [
+    source 72
+    target 88
+  ]
+  edge [
+    source 73
+    target 82
+  ]
+  edge [
+    source 75
+    target 87
+  ]
+  edge [
+    source 76
+    target 85
+  ]
+  edge [
+    source 76
+    target 89
+  ]
+  edge [
+    source 76
+    target 91
+  ]
+  edge [
+    source 77
+    target 94
+  ]
+  edge [
+    source 77
+    target 98
+  ]
+  edge [
+    source 79
+    target 80
+  ]
+  edge [
+    source 80
+    target 95
+  ]
+  edge [
+    source 81
+    target 82
+  ]
+  edge [
+    source 82
+    target 98
+  ]
+  edge [
+    source 83
+    target 85
+  ]
+  edge [
+    source 83
+    target 93
+  ]
+  edge [
+    source 84
+    target 95
+  ]
+  edge [
+    source 84
+    target 99
+  ]
+  edge [
+    source 85
+    target 88
+  ]
+  edge [
+    source 86
+    target 96
+  ]
+  edge [
+    source 89
+    target 97
   ]
 ]

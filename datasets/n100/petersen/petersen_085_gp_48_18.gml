@@ -1,4 +1,31 @@
 graph [
+  nodes 96
+  edges 144
+  petersen_n 48
+  petersen_k 18
+  is_connected 1
+  is_3_regular 1
+  diameter 7
+  radius 7
+  center_size 96
+  max_degree 3
+  min_degree 3
+  avg_degree 3.0
+  girth "None"
+  is_planar 0
+  clustering_coefficient 0.0
+  density 0.031578947368421054
+  avg_shortest_path_length 4.610526315789474
+  hypergraph_omega_sqrt_n_D_lower_bound_val 4.563103966404795
+  mutual_visibility_number "None"
+  mutual_visibility_lower_bound "None"
+  mutual_visibility_upper_bound "None"
+  graph_type "petersen"
+  size_category "n100"
+  instance 85
+  seed 10085
+  filename "petersen_085_gp_48_18.gml"
+  graph_id 85
   node [
     id 0
     label "0"

@@ -1,4 +1,31 @@
 graph [
+  nodes 10
+  edges 15
+  petersen_n 5
+  petersen_k 1
+  is_connected 1
+  is_3_regular 1
+  diameter 3
+  radius 3
+  center_size 10
+  max_degree 3
+  min_degree 3
+  avg_degree 3.0
+  girth 4
+  is_planar 1
+  clustering_coefficient 0.0
+  density 0.3333333333333333
+  avg_shortest_path_length 1.8888888888888888
+  hypergraph_omega_sqrt_n_D_lower_bound_val 2.3008949665421112
+  mutual_visibility_number "None"
+  mutual_visibility_lower_bound "None"
+  mutual_visibility_upper_bound "None"
+  graph_type "petersen"
+  size_category "n10"
+  instance 0
+  seed 10000
+  filename "petersen_000_gp_5_1.gml"
+  graph_id 0
   node [
     id 0
     label "0"
