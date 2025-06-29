@@ -32,18 +32,24 @@ def get_torus_properties(G, n, m):
     # The exact mutual visibility number is not known, but mv <= 3 * min(m, n)
     mutual_visibility_upper_bound = 3 * min(n, m)
 
-    if nodes > 1000: 
-        print(f"    Skipping average shortest path length calculation for M(G) n={nodes} (potentially slow).")
+    if nodes > 1000:
+        print(
+            f"    Skipping average shortest path length calculation for M(G) n={nodes} (potentially slow)."
+        )
     elif nodes > 0:
-        try: 
+        try:
             mycielskian_avg_shortest_path_length = nx.average_shortest_path_length(G)
-        except nx.NetworkXError: 
-            pass 
-    
-    hypergraph_omega_sqrt_n_D_lower_bound_val = None
-    if mycielskian_avg_shortest_path_length is not None and mycielskian_avg_shortest_path_length > 0:
-        hypergraph_omega_sqrt_n_D_lower_bound_val = math.sqrt(nodes / mycielskian_avg_shortest_path_length)
+        except nx.NetworkXError:
+            pass
 
+    hypergraph_omega_sqrt_n_D_lower_bound_val = None
+    if (
+        mycielskian_avg_shortest_path_length is not None
+        and mycielskian_avg_shortest_path_length > 0
+    ):
+        hypergraph_omega_sqrt_n_D_lower_bound_val = math.sqrt(
+            nodes / mycielskian_avg_shortest_path_length
+        )
 
     return {
         "nodes": nodes,
@@ -442,56 +448,6 @@ def generate_torus_dataset():
 
     # Create overall summary
     if all_torus_data:
-        overall_summary_path = datasets_dir / "overall_torus_summary.json"
-
-        # Calculate overall statistics
-        all_properties = [data["properties"] for data in all_torus_data]
-
-        overall_summary = {
-            "dataset_info": {
-                "total_tori": len(all_torus_data),
-                "generation_date": "2025-06-27",
-                "size_categories": len(size_configs),
-                "graph_type": "torus",
-            },
-            "size_breakdown": {
-                config["label"]: len(
-                    [
-                        d
-                        for d in all_torus_data
-                        if d["properties"]["nodes"] <= config["target"] * 1.5
-                    ]
-                )
-                for config in size_configs
-            },
-            "overall_statistics": {
-                "nodes": {
-                    "min": min(p["nodes"] for p in all_properties),
-                    "max": max(p["nodes"] for p in all_properties),
-                    "mean": round(
-                        sum(p["nodes"] for p in all_properties) / len(all_properties), 2
-                    ),
-                },
-                "mutual_visibility_upper_bounds": {
-                    "min": min(
-                        p["mutual_visibility_upper_bound"] for p in all_properties
-                    ),
-                    "max": max(
-                        p["mutual_visibility_upper_bound"] for p in all_properties
-                    ),
-                    "mean": round(
-                        sum(p["mutual_visibility_upper_bound"] for p in all_properties)
-                        / len(all_properties),
-                        2,
-                    ),
-                },
-            },
-        }
-
-        with open(overall_summary_path, "w") as f:
-            json.dump(overall_summary, f, indent=2)
-
-        print(f"\n📊 Created overall summary: {overall_summary_path}")
         print(f"🎉 Total dataset: {len(all_torus_data)} torus graphs generated!")
 
     return all_torus_data

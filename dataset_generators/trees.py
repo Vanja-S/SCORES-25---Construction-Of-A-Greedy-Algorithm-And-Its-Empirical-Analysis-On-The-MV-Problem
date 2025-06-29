@@ -26,18 +26,24 @@ def get_tree_properties(G):
     max_degree = max(degrees)
     avg_degree = sum(degrees) / len(degrees)
 
-    if n > 300: 
-        print(f"    Skipping average shortest path length calculation for M(G) n={n} (potentially slow).")
+    if n > 300:
+        print(
+            f"    Skipping average shortest path length calculation for M(G) n={n} (potentially slow)."
+        )
     elif n > 0:
-        try: 
+        try:
             mycielskian_avg_shortest_path_length = nx.average_shortest_path_length(G)
-        except nx.NetworkXError: 
-            pass 
-    
+        except nx.NetworkXError:
+            pass
+
     hypergraph_omega_sqrt_n_D_lower_bound_val = None
-    if mycielskian_avg_shortest_path_length is not None and mycielskian_avg_shortest_path_length > 0:
-        hypergraph_omega_sqrt_n_D_lower_bound_val = math.sqrt(n / mycielskian_avg_shortest_path_length)
-    
+    if (
+        mycielskian_avg_shortest_path_length is not None
+        and mycielskian_avg_shortest_path_length > 0
+    ):
+        hypergraph_omega_sqrt_n_D_lower_bound_val = math.sqrt(
+            n / mycielskian_avg_shortest_path_length
+        )
 
     return {
         "nodes": n,
@@ -386,11 +392,6 @@ def generate_tree_dataset():
         print(f"📈 Created summary for {size} nodes")
         print(f"✅ Generated {len(dataset_info)} trees for size {size}")
 
-    # Create overall summary
-    create_overall_summary(all_dataset_info, project_root)
-
-    print(f"\n📊 Created overall summary")
-
     total_trees = sum(len(info) for info in all_dataset_info.values())
     print(f"🎉 Total dataset: {total_trees} tree graphs generated!")
 
@@ -436,29 +437,6 @@ def create_size_summary(size, dataset_info, project_root):
         f"      Leaf count range: {summary['mutual_visibility_stats']['min_leaves']} - {summary['mutual_visibility_stats']['max_leaves']}"
     )
     print(f"      Average leaves: {summary['mutual_visibility_stats']['avg_leaves']}")
-
-
-def create_overall_summary(all_dataset_info, project_root):
-    """Create overall dataset summary"""
-
-    overall_summary = {
-        "dataset_sizes": list(all_dataset_info.keys()),
-        "total_trees": sum(len(info) for info in all_dataset_info.values()),
-        "trees_per_size": {size: len(info) for size, info in all_dataset_info.items()},
-        "mutual_visibility_ranges": {},
-    }
-
-    for size, dataset_info in all_dataset_info.items():
-        mv_numbers = [item["mutual_visibility_number"] for item in dataset_info]
-        overall_summary["mutual_visibility_ranges"][size] = {
-            "min": min(mv_numbers),
-            "max": max(mv_numbers),
-            "avg": round(sum(mv_numbers) / len(mv_numbers), 2),
-        }
-
-    # Save overall summary
-    with open(project_root / "datasets" / "overall_tree_summary.json", "w") as f:
-        json.dump(overall_summary, f, indent=2)
 
 
 def is_valid_tree(G, expected_size=None):

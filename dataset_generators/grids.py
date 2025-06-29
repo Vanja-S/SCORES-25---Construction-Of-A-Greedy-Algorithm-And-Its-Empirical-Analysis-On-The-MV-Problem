@@ -31,18 +31,24 @@ def get_grid_properties(G, n, m):
     # For grid graphs, the mutual visibility number is 2 * min(n, m)
     mutual_visibility_number = 2 * min(n, m)
 
-    if nodes > 5000: 
-        print(f"    Skipping average shortest path length calculation for M(G) n={nodes} (potentially slow).")
+    if nodes > 5000:
+        print(
+            f"    Skipping average shortest path length calculation for M(G) n={nodes} (potentially slow)."
+        )
     elif nodes > 0:
-        try: 
+        try:
             mycielskian_avg_shortest_path_length = nx.average_shortest_path_length(G)
-        except nx.NetworkXError: 
-            pass 
-    
-    hypergraph_omega_sqrt_n_D_lower_bound_val = None
-    if mycielskian_avg_shortest_path_length is not None and mycielskian_avg_shortest_path_length > 0:
-        hypergraph_omega_sqrt_n_D_lower_bound_val = math.sqrt(nodes / mycielskian_avg_shortest_path_length)
+        except nx.NetworkXError:
+            pass
 
+    hypergraph_omega_sqrt_n_D_lower_bound_val = None
+    if (
+        mycielskian_avg_shortest_path_length is not None
+        and mycielskian_avg_shortest_path_length > 0
+    ):
+        hypergraph_omega_sqrt_n_D_lower_bound_val = math.sqrt(
+            nodes / mycielskian_avg_shortest_path_length
+        )
 
     return {
         "nodes": nodes,
@@ -360,11 +366,6 @@ def generate_grid_dataset():
         print(f"📈 Created summary for {size} nodes")
         print(f"✅ Generated {len(dataset_info)} grids for size {size}")
 
-    # Create overall summary
-    create_overall_summary(all_dataset_info, project_root)
-
-    print(f"\n📊 Created overall summary")
-
     total_grids = sum(len(info) for info in all_dataset_info.values())
     print(f"🎉 Total dataset: {total_grids} grid graphs generated!")
 
@@ -426,39 +427,6 @@ def create_size_summary(size, dataset_info, project_root):
         f"      MV number range: {summary['mutual_visibility_stats']['min_mv']} - {summary['mutual_visibility_stats']['max_mv']}"
     )
     print(f"      Average MV: {summary['mutual_visibility_stats']['avg_mv']}")
-
-
-def create_overall_summary(all_dataset_info, project_root):
-    """Create overall dataset summary"""
-
-    overall_summary = {
-        "dataset_sizes": list(all_dataset_info.keys()),
-        "total_grids": sum(len(info) for info in all_dataset_info.values()),
-        "grids_per_size": {size: len(info) for size, info in all_dataset_info.items()},
-        "mutual_visibility_ranges": {},
-        "size_ranges": {},
-    }
-
-    for size, dataset_info in all_dataset_info.items():
-        if dataset_info:
-            mv_numbers = [item["mutual_visibility_number"] for item in dataset_info]
-            actual_sizes = [item["nodes"] for item in dataset_info]
-
-            overall_summary["mutual_visibility_ranges"][size] = {
-                "min": min(mv_numbers),
-                "max": max(mv_numbers),
-                "avg": round(sum(mv_numbers) / len(mv_numbers), 2),
-            }
-
-            overall_summary["size_ranges"][size] = {
-                "min": min(actual_sizes),
-                "max": max(actual_sizes),
-                "avg": round(sum(actual_sizes) / len(actual_sizes), 2),
-            }
-
-    # Save overall summary
-    with open(project_root / "datasets" / "overall_grid_summary.json", "w") as f:
-        json.dump(overall_summary, f, indent=2)
 
 
 def verify_dataset_integrity(project_root):
