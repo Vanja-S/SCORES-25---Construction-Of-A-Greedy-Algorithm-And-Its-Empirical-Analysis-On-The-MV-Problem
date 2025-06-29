@@ -52,23 +52,23 @@ def get_valid_k_values(n):
         List of valid k values
     """
     import math
-    
+
     valid_k = []
     for k in range(1, n // 2 + 1):
         # Exclude k values that create degenerate graphs:
         # 1. k = n/2 creates duplicate edges in the inner cycle when n is even
         # 2. When gcd(n,k) > 1, the inner cycle becomes disconnected
-        
+
         # Skip k = n/2 to avoid duplicate edges
         if k == n // 2 and n % 2 == 0:
             continue
-            
+
         # For better graph structure, we can optionally require gcd(n,k) = 1
         # This ensures the inner cycle is connected, but we'll be more permissive
         # and only exclude the most problematic cases
         if math.gcd(n, k) == n // 2:  # This creates two disconnected cycles
             continue
-            
+
         valid_k.append(k)
 
     return valid_k
