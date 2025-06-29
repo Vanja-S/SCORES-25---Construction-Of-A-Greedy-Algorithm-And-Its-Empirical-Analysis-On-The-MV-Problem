@@ -321,7 +321,9 @@ def generate_grid_dataset():
                     {"filename": relative_filename, "graph_id": graph_id, **properties}
                 )
 
-                print(f"  ✅ Generated grid {graph_id:03d}: {n}×{m} grid ({n*m} nodes) -> {relative_filename}")
+                print(
+                    f"  ✅ Generated grid {graph_id:03d}: {n}×{m} grid ({n*m} nodes) -> {relative_filename}"
+                )
 
                 graph_id += 1
 
@@ -509,7 +511,9 @@ def verify_dataset_integrity(project_root):
 
                 if is_valid:
                     results["valid_grids"] += 1
-                    print(f"  ✅ {filename}: Valid {expected_n}×{expected_m} grid ({expected_nodes} nodes)")
+                    print(
+                        f"  ✅ {filename}: Valid {expected_n}×{expected_m} grid ({expected_nodes} nodes)"
+                    )
                 else:
                     results["invalid_grids"] += 1
                     results["errors"].append(f"{filename}: {error_msg}")
@@ -533,7 +537,7 @@ def verify_dataset_integrity(project_root):
     total_files = sum(r["total_files"] for r in verification_results.values())
     total_valid = sum(r["valid_grids"] for r in verification_results.values())
     total_errors = sum(len(r["errors"]) for r in verification_results.values())
-    
+
     print(f"\n📊 Verification Summary:")
     print(f"Total files checked: {total_files}")
     print(f"Valid grids: {total_valid}")
@@ -546,7 +550,9 @@ def verify_dataset_integrity(project_root):
                 for error in results["errors"][:3]:  # Show first 3 errors per size
                     print(f"  - {error}")
                 if len(results["errors"]) > 3:
-                    print(f"  ... and {len(results['errors']) - 3} more errors in {size_label}")
+                    print(
+                        f"  ... and {len(results['errors']) - 3} more errors in {size_label}"
+                    )
     else:
         print("✅ All grids are valid!")
 
@@ -563,7 +569,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--verify",
         action="store_true",
-        help="Verify existing dataset integrity instead of generating new data"
+        help="Verify existing dataset integrity instead of generating new data",
     )
 
     args = parser.parse_args()

@@ -345,12 +345,16 @@ def generate_tree_dataset():
                         }
                     )
 
-                    print(f"    ✅ Generated tree {graph_id:03d}: {tree_type} tree ({size} nodes) -> {relative_filename}")
+                    print(
+                        f"    ✅ Generated tree {graph_id:03d}: {tree_type} tree ({size} nodes) -> {relative_filename}"
+                    )
 
                     graph_id += 1
 
                 except Exception as e:
-                    print(f"    ❌ Error generating {tree_type} tree of size {size}: {e}")
+                    print(
+                        f"    ❌ Error generating {tree_type} tree of size {size}: {e}"
+                    )
                     continue
 
         # Save dataset metadata for this size
@@ -569,7 +573,7 @@ def verify_dataset_integrity(project_root):
     total_files = sum(r["total_files"] for r in verification_results.values())
     total_valid = sum(r["valid_trees"] for r in verification_results.values())
     total_errors = sum(len(r["errors"]) for r in verification_results.values())
-    
+
     print(f"\n📊 Verification Summary:")
     print(f"Total files checked: {total_files}")
     print(f"Valid trees: {total_valid}")
@@ -582,7 +586,9 @@ def verify_dataset_integrity(project_root):
                 for error in results["errors"][:3]:  # Show first 3 errors per size
                     print(f"  - {error}")
                 if len(results["errors"]) > 3:
-                    print(f"  ... and {len(results['errors']) - 3} more errors in {size_label}")
+                    print(
+                        f"  ... and {len(results['errors']) - 3} more errors in {size_label}"
+                    )
     else:
         print("✅ All trees are valid!")
 
@@ -622,7 +628,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--verify",
         action="store_true",
-        help="Verify existing dataset integrity instead of generating new data"
+        help="Verify existing dataset integrity instead of generating new data",
     )
 
     args = parser.parse_args()

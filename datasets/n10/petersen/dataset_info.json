@@ -1,59 +1,44 @@
-{
-  "dataset_type": "generalized_petersen_graphs",
-  "size_category": "n10",
-  "generation_date": "2025-06-28",
-  "total_graphs": 2,
-  "description": "Generalized Petersen graphs GP(n,k) with approximately 10 nodes",
-  "graphs": [
-    {
-      "id": 0,
-      "filename": "petersen_000_gp_5_1.gml",
-      "type": "generalized_petersen",
-      "parameters": {
-        "n": 5,
-        "k": 1
-      },
-      "properties": {
-        "nodes": 10,
-        "edges": 15,
-        "n_parameter": 5,
-        "k_parameter": 1,
-        "is_connected": true,
-        "is_3_regular": true,
-        "diameter": 3,
-        "girth": 5,
-        "is_planar": true,
-        "automorphism_group_size": "not_computed",
-        "has_hamiltonian_cycle": "not_computed",
-        "clustering_coefficient": 0.0,
-        "density": 0.3333333333333333
-      },
-      "notes": "Generalized Petersen graph GP(5,1)"
-    },
-    {
-      "id": 1,
-      "filename": "petersen_001_gp_5_2.gml",
-      "type": "generalized_petersen",
-      "parameters": {
-        "n": 5,
-        "k": 2
-      },
-      "properties": {
-        "nodes": 10,
-        "edges": 15,
-        "n_parameter": 5,
-        "k_parameter": 2,
-        "is_connected": true,
-        "is_3_regular": true,
-        "diameter": 2,
-        "girth": "computed_later",
-        "is_planar": false,
-        "automorphism_group_size": "not_computed",
-        "has_hamiltonian_cycle": "not_computed",
-        "clustering_coefficient": 0.0,
-        "density": 0.3333333333333333
-      },
-      "notes": "Generalized Petersen graph GP(5,2)"
-    }
-  ]
-}
+[
+  {
+    "filename": "petersen_000_gp_5_1.gml",
+    "graph_id": 0,
+    "nodes": 10,
+    "edges": 15,
+    "petersen_n": 5,
+    "petersen_k": 1,
+    "diameter": 3,
+    "radius": 3,
+    "center_size": 1,
+    "max_degree": 3,
+    "min_degree": 3,
+    "avg_degree": 3.0,
+    "girth": 5,
+    "is_connected": true,
+    "is_3_regular": true,
+    "is_planar": true,
+    "graph_type": "petersen",
+    "instance": 0,
+    "seed": 10000
+  },
+  {
+    "filename": "petersen_001_gp_5_2.gml",
+    "graph_id": 1,
+    "nodes": 10,
+    "edges": 15,
+    "petersen_n": 5,
+    "petersen_k": 2,
+    "diameter": 2,
+    "radius": 2,
+    "center_size": 1,
+    "max_degree": 3,
+    "min_degree": 3,
+    "avg_degree": 3.0,
+    "girth": "computed_later",
+    "is_connected": true,
+    "is_3_regular": true,
+    "is_planar": false,
+    "graph_type": "petersen",
+    "instance": 1,
+    "seed": 10001
+  }
+]
