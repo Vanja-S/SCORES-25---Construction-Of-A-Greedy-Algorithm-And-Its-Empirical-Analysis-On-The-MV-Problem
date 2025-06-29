@@ -593,29 +593,6 @@ def verify_dataset_integrity(project_root):
         print("✅ All trees are valid!")
 
     return total_valid == total_files and total_errors == 0
-    print("=" * 50)
-
-    total_valid = sum(
-        results["valid_trees"] for results in verification_results.values()
-    )
-    total_invalid = sum(
-        results["invalid_trees"] for results in verification_results.values()
-    )
-    total_missing = sum(
-        results["missing_files"] for results in verification_results.values()
-    )
-
-    print(f"Overall Results:")
-    print(f"  Valid trees: {total_valid}")
-    print(f"  Invalid trees: {total_invalid}")
-    print(f"  Missing files: {total_missing}")
-    print(
-        f"  Success rate: {total_valid/(total_valid+total_invalid)*100:.1f}%"
-        if (total_valid + total_invalid) > 0
-        else "N/A"
-    )
-
-    return verification_results
 
 
 if __name__ == "__main__":

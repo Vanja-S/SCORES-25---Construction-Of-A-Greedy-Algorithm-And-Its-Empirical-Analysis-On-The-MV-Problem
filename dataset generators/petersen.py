@@ -51,11 +51,24 @@ def get_valid_k_values(n):
     Returns:
         List of valid k values
     """
+    import math
+    
     valid_k = []
     for k in range(1, n // 2 + 1):
-        # Include all k values up to n//2 for variety
-        # We could add gcd(n,k) == 1 constraint for more restrictions, but
-        # we want variety in our dataset
+        # Exclude k values that create degenerate graphs:
+        # 1. k = n/2 creates duplicate edges in the inner cycle when n is even
+        # 2. When gcd(n,k) > 1, the inner cycle becomes disconnected
+        
+        # Skip k = n/2 to avoid duplicate edges
+        if k == n // 2 and n % 2 == 0:
+            continue
+            
+        # For better graph structure, we can optionally require gcd(n,k) = 1
+        # This ensures the inner cycle is connected, but we'll be more permissive
+        # and only exclude the most problematic cases
+        if math.gcd(n, k) == n // 2:  # This creates two disconnected cycles
+            continue
+            
         valid_k.append(k)
 
     return valid_k
@@ -374,22 +387,31 @@ def validate_petersen_graph(G, n, k):
     if not nx.is_connected(G):
         return False, "Graph is not connected"
 
+    # Handle both integer and string node labels (GML files often convert to strings)
+    def normalize_node(node_id):
+        """Convert node id to string if it's not already, for consistency"""
+        return str(node_id)
+
     # Check outer cycle
     for i in range(n):
-        if not G.has_edge(i, (i + 1) % n):
-            return False, f"Missing outer cycle edge: {i} - {(i + 1) % n}"
+        node1 = normalize_node(i)
+        node2 = normalize_node((i + 1) % n)
+        if not G.has_edge(node1, node2):
+            return False, f"Missing outer cycle edge: {node1} - {node2}"
 
     # Check inner cycle
     for i in range(n):
-        inner_v1 = n + i
-        inner_v2 = n + ((i + k) % n)
+        inner_v1 = normalize_node(n + i)
+        inner_v2 = normalize_node(n + ((i + k) % n))
         if not G.has_edge(inner_v1, inner_v2):
             return False, f"Missing inner cycle edge: {inner_v1} - {inner_v2}"
 
     # Check spokes
     for i in range(n):
-        if not G.has_edge(i, n + i):
-            return False, f"Missing spoke edge: {i} - {n + i}"
+        node1 = normalize_node(i)
+        node2 = normalize_node(n + i)
+        if not G.has_edge(node1, node2):
+            return False, f"Missing spoke edge: {node1} - {node2}"
 
     return True, "Valid generalized Petersen graph"
 
