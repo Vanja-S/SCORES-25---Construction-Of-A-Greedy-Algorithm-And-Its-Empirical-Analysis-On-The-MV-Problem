@@ -2,303 +2,70 @@
 
 Research paper submitted to the conference SCORES 25, in the field of graph theory, tackling the mutual-visibility problem. Co-authored with Bor Pangeršič.
 
-## Dataset Generation and Verification
+## Dataset
 
-This project includes a comprehensive dataset generation system for creating both tree and grid graph instances to test mutual visibility algorithms. The mutual visibility problem on trees is equivalent to finding the minimum number of leaves needed, while grid graphs provide a different structural challenge for algorithm development and empirical analysis.
+This project includes graph datasets for testing mutual visibility algorithms across multiple graph families and sizes.
 
 ### Dataset Structure
 
-The generated dataset is organized as follows:
-
 ```text
 datasets/
-├── overall_summary.json          # Global tree dataset statistics
-├── overall_grid_summary.json     # Global grid dataset statistics
-├── overall_torus_summary.json    # Global torus dataset statistics
 ├── n10/                         # Graphs with ~10 nodes
-│   ├── trees/
-│   │   ├── dataset_info.json   # Metadata for all trees in this size
-│   │   ├── summary.json         # Statistical summary for trees
-│   │   └── tree_*.gml          # Individual tree files in GML format
-│   ├── grids/
-│   │   ├── dataset_info.json   # Metadata for all grids in this size
-│   │   ├── summary.json         # Statistical summary for grids
-│   │   └── grid_*.gml          # Individual grid files in GML format
-│   └── tori/
-│       ├── dataset_info.json   # Metadata for all tori in this size
-│       ├── summary.json         # Statistical summary for tori
-│       └── torus_*.gml         # Individual torus files in GML format
-├── n100/                       # Graphs with ~100 nodes
-│   ├── trees/
-│   ├── grids/
-│   └── tori/
-└── n1000/                      # Graphs with ~1000 nodes
-    ├── trees/
-    ├── grids/
-    └── tori/
-    └── grids/
+│   ├── trees/                   # Tree graphs (77 instances)
+│   ├── complete/                # Complete graphs (15 instances)
+│   ├── erdos_renyi/             # Erdős–Rényi random graphs (60 instances)
+│   ├── grids/                   # Grid graphs (15 instances)
+│   ├── mycielskian/             # Mycielskian graphs (5 instances)
+│   └── petersen/                # Petersen-like graphs (5 instances)
+├── n100/                        # Graphs with ~100 nodes
+│   ├── trees/                   # Tree graphs (102 instances)
+│   ├── complete/                # Complete graphs (15 instances)
+│   ├── erdos_renyi/             # Erdős–Rényi random graphs (60 instances)
+│   ├── grids/                   # Grid graphs (15 instances)
+│   ├── mycielskian/             # Mycielskian graphs (5 instances)
+│   └── petersen/                # Petersen-like graphs (5 instances)
+└── n1000/                       # Graphs with ~1000 nodes
+    ├── trees/                   # Tree graphs
+    ├── erdos_renyi/             # Erdős–Rényi random graphs
+    ├── grids/                   # Grid graphs
+    └── petersen/                # Petersen-like graphs
 ```
 
-### Graph Types Generated
+### Graph Types
 
-The dataset includes three main categories of graphs:
+- **Trees**: 7 types (random, star, path, balanced, caterpillar, binary, spider)
+  - Star and path trees: 1 instance per size (isomorphic)
+  - Other types: 15-20 instances per size
+- **Complete Graphs**: Cliques K_n
+- **Erdős–Rényi Graphs**: Random graphs with varying edge probabilities
+- **Grid Graphs**: 2D lattice structures P_n × P_m
+- **Mycielskian Graphs**: Triangle-free graphs with high chromatic number
+- **Petersen Graphs**: Generalized Petersen graph family
 
-#### Tree Graphs
+### Generation
 
-Seven different types of trees, each with specific structural properties:
-
-1. **Random Trees**: Generated using Prüfer sequences for unbiased random structures
-2. **Star Trees**: One central node connected to all other nodes (n-1 leaves)
-3. **Path Trees**: Linear chains of nodes (2 leaves, minimal mutual visibility)
-4. **Balanced Trees**: Approximately balanced binary/k-ary trees
-5. **Caterpillar Trees**: Path backbone with leaves attached to internal nodes
-6. **Binary Trees**: Random binary tree structures
-7. **Spider Trees**: Star-like structures with paths extending from the center
-
-#### Grid Graphs
-
-Grid graphs are Cartesian products of two paths (P_n × P_m) where:
-
-- Both dimensions n > 3 and m > 3
-- Generated to approximate target sizes (10, 100, 1000 nodes)
-- Regular 2D lattice structures with well-defined geometric properties
-- Examples: 4×4 (16 nodes), 10×10 (100 nodes), 28×36 (1008 nodes)
-
-#### Torus Graphs
-
-Torus graphs are Cartesian products of two cycles (C_n × C_m) where:
-
-- Both dimensions n ≥ 3 and m ≥ 3
-- Generated to approximate target sizes (10, 100, 1000 nodes)
-- Regular 4-degree toroidal structures with wrap-around edges both horizontally and vertically
-- Mutual visibility upper bound: mv ≤ 3 × min(n, m) (exact value unknown)
-- Examples: 3×3 (9 nodes), 10×10 (100 nodes), 31×31 (961 nodes)
-
-### Dataset Sizes and Instances
-
-#### Trees
-- **Small trees (n=10)**: 15 instances per type × 7 types = 105 total trees
-- **Medium trees (n=100)**: 20 instances per type × 7 types = 140 total trees
-- **Large trees (n=1000)**: 30 instances per type × 7 types = 210 total trees
-
-**Total tree dataset**: 455 annotated tree instances
-
-#### Grids
-- **Small grids (n≈10-20)**: 15 instances = 15 total grids (variable dimensions like 4×4, 4×5, 5×4)
-- **Medium grids (n≈100)**: 20 instances = 20 total grids (10×10, 100 nodes each)
-- **Large grids (n≈1000)**: 30 instances = 30 total grids (28×36, 1008 nodes each)
-
-**Total grid dataset**: 65 annotated grid instances (with varied dimensions)
-
-#### Tori
-- **Small tori (n≈10-12)**: 15 instances = 15 total tori (variable dimensions like 3×3, 3×4, 4×3)
-- **Medium tori (n≈100)**: 20 instances = 20 total tori (dimensions like 10×10, 3×36, 5×20)
-- **Large tori (n≈1000)**: 30 instances = 30 total tori (dimensions like 31×31, 4×250, 8×125)
-
-**Total torus dataset**: 65 annotated torus instances (with varied dimensions)
-
-**Combined dataset size**: 585 total graph instances
-
-### Graph Properties and Annotations
-
-Each graph instance includes comprehensive metadata:
-
-#### Tree Properties
-
-- `nodes`: Number of vertices
-- `mutual_visibility_number`: Number of leaves (target value for MV problem)
-- `leaves`: Number of leaf nodes (same as mutual_visibility_number for trees)
-- `diameter`: Maximum shortest path distance between any two nodes
-- `radius`: Minimum eccentricity among all nodes
-- `center_size`: Number of nodes in the center of the tree
-- `max_degree`: Maximum degree of any node
-- `avg_degree`: Average degree across all nodes
-- `internal_nodes`: Number of non-leaf nodes
-- `tree_type`: Type of tree generation algorithm used
-- `instance`: Instance number within the type
-- `graph_id`: Unique identifier across the entire dataset
-- `seed`: Random seed used for reproducible generation
-
-#### Grid Properties
-
-- `nodes`: Number of vertices
-- `edges`: Number of edges
-- `grid_dimensions`: Array [n, m] of grid dimensions
-- `grid_width`: Width of the grid (n)
-- `grid_height`: Height of the grid (m)
-- `mutual_visibility_number`: Computed dominating set size (approximation)
-- `diameter`: Maximum shortest path distance
-- `radius`: Minimum eccentricity among all nodes
-- `center_size`: Number of nodes in the center
-- `max_degree`: Maximum degree (4 for interior nodes)
-- `min_degree`: Minimum degree (2 for corner nodes)
-- `avg_degree`: Average degree across all nodes
-- `corner_nodes`: Number of corner nodes (always 4)
-- `edge_nodes`: Number of boundary nodes (excluding corners)
-- `interior_nodes`: Number of interior nodes
-- `graph_type`: Always "grid"
-- `instance`: Instance number
-- `graph_id`: Unique identifier
-- `seed`: Random seed used for reproducible generation
-
-#### Torus Properties
-
-- `nodes`: Number of vertices
-- `edges`: Number of edges
-- `torus_dimensions`: Array [n, m] of torus dimensions
-- `torus_width`: Width of the torus (n)
-- `torus_height`: Height of the torus (m)
-- `mutual_visibility_upper_bound`: Upper bound for mutual visibility: 3 × min(n, m)
-- `diameter`: Maximum shortest path distance
-- `radius`: Minimum eccentricity among all nodes
-- `center_size`: Number of nodes in the center
-- `max_degree`: Maximum degree (always 4 for torus graphs)
-- `min_degree`: Minimum degree (always 4 for torus graphs)
-- `avg_degree`: Average degree across all nodes (always 4.0 for torus graphs)
-- `graph_type`: Always "torus"
-- `instance`: Instance number
-- `graph_id`: Unique identifier
-- `seed`: Random seed used for reproducible generation
-
-#### Node-level Properties
-
-- `degree`: Degree of each node
-- `is_leaf`: Boolean indicating if the node is a leaf (trees only)
-- `eccentricity`: Maximum distance from this node to any other node
-
-### Generation Process
-
-#### Tree Generation (`dataset generators/trees.py`)
-
-To generate a new tree dataset:
+Generate datasets using:
 
 ```bash
-cd "dataset generators"
-python trees.py
+cd dataset_generators
+python trees.py        # Tree graphs
+python complete_graphs.py  # Complete graphs
+python erdos.py        # Erdős–Rényi graphs
+python grids.py        # Grid graphs
+python mycelskian.py   # Mycielskian graphs
+python petersen.py     # Petersen graphs
 ```
 
-#### Grid Generation (`dataset generators/grids.py`)
+### Verification
 
-To generate a new grid dataset:
+Verify dataset integrity:
 
 ```bash
-cd "dataset generators"
-python grids.py
+cd dataset_generators
+python <generator>.py --verify
 ```
 
-#### Torus Generation (`dataset generators/tori.py`)
+### File Format
 
-To generate a new torus dataset:
-
-```bash
-cd "dataset generators"
-python tori.py
-```
-
-The generation process includes:
-
-1. **Folder Structure Creation**: Automatically creates the required directory hierarchy
-2. **Type-specific Generation**: Uses specialized algorithms for each tree type
-3. **Size Validation**: Ensures all trees have exactly the specified number of nodes
-4. **Connectivity Verification**: Validates that all generated graphs are connected trees
-5. **Property Calculation**: Computes all structural and metric properties
-6. **File Export**: Saves trees in GML format with embedded metadata
-7. **Summary Generation**: Creates statistical summaries at multiple levels
-
-#### Quality Assurance
-
-The generation process includes comprehensive validation:
-
-- **Tree Structure Validation**: Ensures graphs are connected and acyclic
-- **Edge Count Verification**: Confirms n-1 edges for n nodes
-- **Size Consistency**: Validates exact node counts
-- **Connectivity Checks**: Ensures all trees are connected
-- **Leaf Count Validation**: Verifies minimum leaf requirements
-
-### Dataset Verification
-
-To verify the integrity of existing datasets:
-
-#### Tree Dataset Verification
-
-```bash
-cd "dataset generators"
-python trees.py --verify
-```
-
-#### Grid Dataset Verification
-
-```bash
-cd "dataset generators"
-python grids.py --verify
-```
-
-#### Torus Dataset Verification
-
-```bash
-cd "dataset generators"
-python tori.py --verify
-```
-
-The verification process checks:
-
-- **File Existence**: Confirms all referenced files exist
-- **Graph Validity**: Validates graph structure and connectivity
-- **Size Consistency**: Verifies node counts match metadata
-- **Property Accuracy**: Checks computed properties against actual graph structure
-- **Grid Structure**: Validates proper grid topology and degree distribution (grids only)
-- **Tree Structure**: Validates tree connectivity and acyclicity (trees only)
-- **Torus Structure**: Validates 4-regular toroidal topology and wrap-around edges (tori only)
-
-#### Verification Results
-
-The verification system provides detailed reports including:
-
-- Total files processed
-- Number of valid vs. invalid trees
-- Missing file detection
-- Size mismatch identification
-- Connectivity error reporting
-- Overall success rate calculation
-
-### File Formats
-
-#### GML Format
-
-Tree instances are stored in Graph Modeling Language (GML) format, which includes:
-
-- Complete graph structure (nodes and edges)
-- All computed properties as graph attributes
-- Node-level annotations
-- Human-readable format suitable for NetworkX
-
-#### JSON Metadata
-
-- `dataset_info.json`: Complete metadata for all trees in a size category
-- `summary.json`: Statistical summaries per size
-- `overall_summary.json`: Global dataset statistics
-
-### Usage in Research
-
-This dataset is designed for:
-
-- **Algorithm Testing**: Standardized instances for mutual visibility algorithms on trees, grids, and tori
-- **Performance Analysis**: Diverse graph structures for comprehensive evaluation
-- **Structural Comparison**: Trees, grids, and tori provide different algorithmic challenges
-- **Reproducible Research**: Seeded generation ensures consistent results
-- **Scalability Studies**: Multiple size categories for performance scaling analysis
-- **Upper Bound Research**: Tori provide graphs with known upper bounds for mutual visibility
-- **Geometric Analysis**: Grid graphs enable study of spatial/geometric properties
-
-### Dataset Statistics
-
-Current dataset includes:
-
-- **520 total graphs** across three size categories
-  - **455 trees** across 7 different types with varying structural properties
-  - **65 grids** with regular 2D lattice structures
-- **100% validation success rate** for connectivity and structural properties
-- **Comprehensive annotations** for algorithm development and analysis
-- **Reproducible generation** using seeded random number generation
-
-The dataset provides a robust foundation for empirical analysis of mutual visibility algorithms on both tree and grid graph structures.
+- **Graphs**: GML format with embedded metadata
+- **Metadata**: JSON files with graph properties and statistics
