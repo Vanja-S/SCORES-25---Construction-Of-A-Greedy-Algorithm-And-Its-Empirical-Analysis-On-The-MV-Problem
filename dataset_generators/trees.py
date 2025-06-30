@@ -221,7 +221,7 @@ def generate_spider_tree(n, seed):
 
 def create_folder_structure():
     """Create the required folder structure"""
-    sizes = [10, 100]
+    sizes = [10, 100, 1000]
 
     # Get the project root directory (parent of current script directory)
     script_dir = Path(__file__).parent
@@ -249,7 +249,7 @@ def generate_tree_dataset():
     project_root = create_folder_structure()
 
     # Dataset configuration
-    sizes = [10, 100]
+    sizes = [10, 100, 1000]
     tree_generators = [
         ("random", generate_random_tree),
         ("star", generate_star_tree),
@@ -264,6 +264,14 @@ def generate_tree_dataset():
     instances_per_type = {
         10: 15,
         100: 20,
+        1000: 10,
+    }
+
+    # Special case: star and path trees are isomorphic for same size, so generate only one
+    special_instances_per_type = {
+        10: 1,
+        100: 1,
+        1000: 1,
     }
 
     all_dataset_info = {}
@@ -279,7 +287,14 @@ def generate_tree_dataset():
         for tree_type, generator_func in tree_generators:
             print(f"  🌳 Generating {tree_type} trees...")
 
-            instances = instances_per_type[size]
+            # Use special instance count for star and path trees (only 1 since they're isomorphic)
+            if tree_type in ["star", "path"]:
+                instances = special_instances_per_type[size]
+                print(
+                    f"    Note: Generating only {instances} {tree_type} tree since all {tree_type} trees of size {size} are isomorphic"
+                )
+            else:
+                instances = instances_per_type[size]
 
             for instance in range(instances):
                 seed = size * 1000 + graph_id * 42 + instance  # Ensure reproducibility
@@ -385,58 +400,12 @@ def generate_tree_dataset():
 
         all_dataset_info[f"n{size}"] = dataset_info
 
-        # Create summary for this size
-        create_size_summary(size, dataset_info, project_root)
-
         print(f"📋 Created metadata: {metadata_file}")
         print(f"📈 Created summary for {size} nodes")
         print(f"✅ Generated {len(dataset_info)} trees for size {size}")
 
     total_trees = sum(len(info) for info in all_dataset_info.values())
     print(f"🎉 Total dataset: {total_trees} tree graphs generated!")
-
-
-def create_size_summary(size, dataset_info, project_root):
-    """Create summary statistics for a specific size"""
-
-    summary = {
-        "size": size,
-        "total_graphs": len(dataset_info),
-        "type_distribution": {},
-        "mutual_visibility_stats": {},
-        "leaf_distribution": {},
-    }
-
-    # Type distribution
-    types = [item["tree_type"] for item in dataset_info]
-    for tree_type in set(types):
-        summary["type_distribution"][tree_type] = types.count(tree_type)
-
-    # Mutual visibility number statistics
-    mv_numbers = [item["mutual_visibility_number"] for item in dataset_info]
-    summary["mutual_visibility_stats"] = {
-        "min_leaves": min(mv_numbers),
-        "max_leaves": max(mv_numbers),
-        "avg_leaves": round(sum(mv_numbers) / len(mv_numbers), 2),
-        "median_leaves": sorted(mv_numbers)[len(mv_numbers) // 2],
-    }
-
-    # Leaf count distribution
-    for leaves in set(mv_numbers):
-        summary["leaf_distribution"][leaves] = mv_numbers.count(leaves)
-
-    # Save summary
-    summary_file = project_root / "datasets" / f"n{size}" / "trees" / "summary.json"
-    with open(summary_file, "w") as f:
-        json.dump(summary, f, indent=2)
-
-    # Print summary
-    print(f"    Summary for n={size}:")
-    print(f"      Total trees: {summary['total_graphs']}")
-    print(
-        f"      Leaf count range: {summary['mutual_visibility_stats']['min_leaves']} - {summary['mutual_visibility_stats']['max_leaves']}"
-    )
-    print(f"      Average leaves: {summary['mutual_visibility_stats']['avg_leaves']}")
 
 
 def is_valid_tree(G, expected_size=None):
@@ -493,7 +462,7 @@ def verify_dataset_integrity(project_root):
     Returns:
         dict: Summary of verification results
     """
-    sizes = [10, 100]
+    sizes = [10, 100, 1000]
     verification_results = {}
 
     print("🔍 Verifying tree dataset...")
