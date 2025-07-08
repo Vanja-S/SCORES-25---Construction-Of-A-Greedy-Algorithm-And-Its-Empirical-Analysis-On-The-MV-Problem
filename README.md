@@ -69,3 +69,13 @@ python <generator>.py --verify
 
 - **Graphs**: GML format with embedded metadata
 - **Metadata**: JSON files with graph properties and statistics
+
+## Testing The Algoritms
+
+All the algorithms described in the paper are available in the `mv_algorithms.py` script. To test them against the dataset, run;
+
+```bash
+python comprehensive_test.py
+```
+
+Which will output the `experiment_results.json`. If the JSON already exists, the analysis can be done in the `analysis.ipynb` file.
